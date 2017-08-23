@@ -37,35 +37,6 @@ h3.title a {
 	text-decoration: none;
 }
 
-// post list
-.post-list {
-    text-align: left;
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
-	li {
-		padding: 10px 18px;
-		margin: 0 10px;
-		text-decoration: none;
-		background: $white;
-		color: $color_shark;
-		a {
-			@include font-rem(20);
-			text-decoration: none;
-			color: $color_shark;
-			font-weight: bolder;
-            &:hover {
-                color: $red;
-            }
-		}
-		p {
-			font-weight: lighter;
-			@include font-rem(16);
-		}
-	}
-}
-
 // quotes
 blockquote {
 	font-family:$alt-font;
@@ -89,7 +60,7 @@ figcaption {
 
 // links
 a {
-  transition: color .4s;
+  transition: color .25s;
   color: $color_shark;
   &:link {
   	color: $color_shark;
