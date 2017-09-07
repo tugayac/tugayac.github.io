@@ -1,0 +1,45 @@
+--- layout: compress ---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  {% include nav.html %}
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="wrapper animated fadeIn">
+      <div class="content">
+        <div class="post-title">
+          <h1>{{ page.title }}</h1>
+          <a class="btn zoombtn" href="{{site.url}}">
+            <i class="fa fa-home"></i>
+          </a>
+        </div>
+        <div id="programming-language-list">
+          <h1 style="text-align: center">Programming Language Skills</h1>
+        </div>
+        <div id="framework-library-list">
+          <h1 style="text-align: center">Framework and Library Skills</h1>
+        </div>
+        <div id="runtime-software-list">
+          <h1 style="text-align: center">Runtime Environment and Software Skills</h1>
+        </div>
+      </div>
+  </header>
+  {% include scripts.html %}
+  <script src="{{ site.url }}/assets/js/wow.min.js"></script>
+  <script src="{{ site.url }}/assets/js/custom/skill-list.js"></script>
+  <script type="text/javascript">
+    (new WOW).init();
+  </script>
+</body>
+
+</html>

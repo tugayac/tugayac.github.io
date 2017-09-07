@@ -34,4 +34,8 @@
 			@include font-rem(16);
 		}
 	}
+
+  .btn {
+    @include font-rem(14);
+  }
 }

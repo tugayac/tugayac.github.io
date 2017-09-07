@@ -76,11 +76,6 @@
     @include font-rem(16);
     font-weight:300;
 }
-.post-list {
-    .btn {
-        @include font-rem(14);
-    }
-}
 
 // hr break
 hr {
