@@ -1,75 +1,95 @@
+$signal-base-width: 10px;
+$signal-base-height: 12px;
+
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 
   @media (max-width: 767px) {
     flex-direction: column;
   }
 
-  & > .skill-title {
-    width: 20%;
-    padding-right: 10px;
+  & > .skill-container {
+    display: flex;
+    flex: auto;
+    border: solid 1px $color_stack;
+    border-radius: $border-radius;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
 
-    @media (max-width: 767px) {
-      width: auto;
-      text-align: center;
+    & > .skill-title {
+      padding-right: 1em;
+      text-align: right;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    & > .skill-level {
+      & > .signal-bar {
+        width: $signal-base-width;
+        background-color: $color_mischka;
+        border-radius: $border-radius;
+        display: inline-block;
+        margin: 1px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &.beginner {
+          height: $signal-base-height;
+        }
+
+        &.intermediate {
+          height: $signal-base-height + $signal-base-height;
+        }
+
+        &.advanced {
+          height: $signal-base-height + $signal-base-height * 2;
+        }
+
+        &.master {
+          height: $signal-base-height + $signal-base-height * 3;
+        }
+
+        &.active {
+          background-color: green;
+        }
+      }
     }
   }
+}
 
-  & > .skill-level {
-    width: 80%;
-    padding-top: .85em;
+#tags {
+  display: flex;
+  align-items: center;
 
-    @media (max-width: 767px) {
-      width: auto;
-    }
+  h2 {
+    margin-right: 10px;
+  }
 
-    ul {
-      align-content: center;
-      align-items: center;
-      counter-reset: stepCount;
-      display: flex;
-      justify-content: space-around;
+  & > .tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-      li {
-        &.color {
-          background-color: green;
-        }
+  .btn {
+    outline: none;
+    white-space: nowrap;
+    margin: 5px;
 
-        &.active::before {
-          background-color: green;
-        }
-      }
-    }
-
-    li {
-      background: $color_stack;
-      color: white;
-      display: flex;
-      flex-grow: 1;
-      height: .3em;
-      position: relative;
-
-      &::before {
-        color: white;
-        background: $color_stack;
-        border-radius: 50%;
-        counter-increment: stepCount;
-        content: counter(stepCount); 
-        left: -2em;
-        line-height: 2em;
-        position: absolute;
-        text-align: center;
-        top: -.85em;
-        width: 2em;
-        font-size: 1.5em;
-      }
-
-      &:last-child {
-        flex-basis: 0;
-        flex-grow: 0;
-        flex-shrink: 1;
-      }
+    &.selected {
+      color: $red;
     }
   }
 }
