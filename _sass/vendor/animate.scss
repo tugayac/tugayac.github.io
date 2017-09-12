@@ -14,6 +14,7 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -71,6 +72,7 @@
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
 @-webkit-keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -103,6 +105,7 @@
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
+
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
@@ -149,6 +152,7 @@
     transform: none;
   }
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -167,6 +171,7 @@
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -192,12 +197,14 @@
   animation-name: fadeOut;
 }
 
+$rotation-degrees: -150deg;
+
 @-webkit-keyframes rotateIn {
   from {
     -webkit-transform-origin: center;
     transform-origin: center;
-    -webkit-transform: rotate3d(0, 0, 1, -200deg);
-    transform: rotate3d(0, 0, 1, -200deg);
+    -webkit-transform: rotate3d(0, 0, 1, $rotation-degrees);
+    transform: rotate3d(0, 0, 1, $rotation-degrees);
     opacity: 0;
   }
 
@@ -214,8 +221,8 @@
   from {
     -webkit-transform-origin: center;
     transform-origin: center;
-    -webkit-transform: rotate3d(0, 0, 1, -200deg);
-    transform: rotate3d(0, 0, 1, -200deg);
+    -webkit-transform: rotate3d(0, 0, 1, $rotation-degrees);
+    transform: rotate3d(0, 0, 1, $rotation-degrees);
     opacity: 0;
   }
 
