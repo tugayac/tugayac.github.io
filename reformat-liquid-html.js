@@ -63,6 +63,8 @@ findHTMLFiles(currentDir, function (err, results) {
           tempFileWriteStream.write(splitLines[i] + ' ' + splitLines[i + 1] + '\n');
         }
         tempFileWriteStream.write(splitLines[splitLines.length - 1]);
+      } else {
+        tempFileWriteStream.write(line + '\n');
       }
     });
     lineReader.on('close', function () {
