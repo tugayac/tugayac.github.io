@@ -80,7 +80,7 @@ I am the sole developer of this project. As such, I am responsible for managing,
 ## Another Pressing Issue
 Online banking in the US is still lacking behind many banks around the world. Most banks simply don't have APIs available to directly retrieve financial information. In cases where Mint cannot exchange my username/password for a token, it has to store them in their database to access my bank account and scrape the page contents. This has the potential to be a huge security issue.
 
-While third-party services are available to retrieve bank account information from thousands of national banks such as [Plaid](https://plaid.com/) and [Yodlee](https://www.yodlee.com/), the barrier to entry is high (due to annual and per-request costs) and flexibility of their APIs is lacking in many cases. As such, I have decided to resort to manual recording of transactions. 
+While third-party services are available to retrieve bank account information from thousands of national banks such as [Plaid](https://plaid.com/) and [Yodlee](https://www.yodlee.com/), the barrier to entry is high (due to annual and per-request costs) and flexibility of their APIs is lacking in many cases. As such, I have decided to resort to manual recording of transactions.
 
 On my road map is to allow users to take photos of receipts, which will then pass through visual recognition algorithms to detect and record transaction information. Other ideas include possibilities such as listening to incoming emails and text messages from banking institutions to automatically record transactions.
 
@@ -101,7 +101,7 @@ The architecture of the application is currently simple and does not have any di
 </figure>
 
 ### NodeJS and ExpressJS
-At BP3, we used Spring Boot (and thus Java) for the backend of our web projects, primarily because the systems we develop our products for run on Java. Wanting to learn more about different backend platforms, I have decided to use NodeJS with JavaScript ES2015. 
+At BP3, we used Spring Boot (and thus Java) for the backend of our web projects, primarily because the systems we develop our products for run on Java. Wanting to learn more about different backend platforms, I have decided to use NodeJS with JavaScript ES2015.
 
 To focus my attention more on GraphQL and iOS app development, I chose ExpressJS which is the most widely used NodeJS web framework. This allows me to easily find answers to questions I may have about the framework and requires less experimentation.
 

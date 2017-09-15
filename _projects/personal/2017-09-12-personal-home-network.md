@@ -44,7 +44,7 @@ A coworker suggested I try out pfSense. For this, I needed dedicated hardware (I
 * Custom Firewall: Allows blocking unwanted access to my home network, such as disabling responses to ping request (ICMP).
 * Dynamic and Static IP assignment: Static IP assignment is useful when servers need to always be located on the same IP address for development.
 * Custom DNS: I can override DNS for all devices in my home network. This prevents me from relying on my ISP's DNS in cases of outages and lets me choose the most responsive DNS servers. Additionally, I can configure DNS caching on my router for faster domain name resolution.
-* Dynamic DNS (DDNS): A big problem with consumer internet services is assignment of dynamic IP addresses by ISPs. This means your external IP address can change at any time, which is a problem if 
+* Dynamic DNS (DDNS): A big problem with consumer internet services is assignment of dynamic IP addresses by ISPs. This means your external IP address can change at any time, which is a problem if
 you're hosting servers at home. To avoid this problem, pfSense can make use of DDNS, notifying your domain name provider of IP address changes.
 
 <figure>
