@@ -1,0 +1,10 @@
+<div class="post-list">
+  {% for project in site.projects %} {% if project.type == include.projectType %}
+  <ul>
+    <li class="post-summary" data-wow-duration="1.5s">
+      <a class="title zoombtn" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
+      <p>{{ project.excerpt }} <a href="{{ site.url }}{{ project.url }}">Read More</a></p>
+    </li>
+  </ul>
+  {% endif %} {% endfor %}
+</div>

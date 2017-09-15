@@ -16,18 +16,14 @@
     <!-- Header -->
     <header class="header" role="banner">
         <div class="wrapper animated fadeIn">
-            <div class="content">
+            <div class="content project-content">
                 {% include page-header.html %}
-                <div class="post-list">
-                    {% for post in site.posts %} {% if post.project %}
-                    <ul>
-                        <li class="post-summary" data-wow-duration="1.5s">
-                            <a class="title zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                            <p>{{ post.excerpt }} <a href="{{ site.url }}{{ post.url }}">Read More</a></p>
-                        </li>
-                    </ul>
-                    {% endif %} {% endfor %}
-                </div>
+                <h2>Projects at BP3</h2>
+                {% include project-list.html projectType="work" %}
+                <h2>Personal Projects</h2>
+                {% include project-list.html projectType="personal" %}
+                <h2>You can find more about my Open Source projects on my <a href="http://github.com/{{ site.github-url }}" target="_blank"
+                        rel="noopener noreferrer">GitHub</a> page.</h2>
             </div>
         </div>
     </header>
