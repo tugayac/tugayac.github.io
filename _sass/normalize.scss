@@ -7,6 +7,12 @@ html {
 
 body {
   margin: 0;
+
+  // This is to remove the layout: compress paragraph inserted at the top, which adds
+  // unnecessary spacing at the top of the screen...
+  & > p:first-of-type {
+    display: none;
+  }
 }
 
 /* HTML5 display definitions
