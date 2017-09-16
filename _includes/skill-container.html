@@ -1,0 +1,15 @@
+<div class="flex-container">
+  {% for skill in skills %} {% if skill.category == include.skillCategory %}
+  <div class="skill-container" data-tags="{{ skill.tags | join: ',' }}" data-skill-title="{{ skill.title }}">
+    <div class="skill-title">
+      <h3>{{ skill.title }}</h3>
+    </div>
+    <div class="skill-level">
+      <div class="signal-bar beginner {% if skill.level >= 1 %}active{% endif %}"></div>
+      <div class="signal-bar intermediate {% if skill.level >= 2 %}active{% endif %}"></div>
+      <div class="signal-bar advanced {% if skill.level >= 3 %}active{% endif %}"></div>
+      <div class="signal-bar master {% if skill.level == 4 %}active{% endif %}"></div>
+    </div>
+  </div>
+  {% endif %} {% endfor %}
+</div>

@@ -1,16 +1,14 @@
+--- layout: compress ---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html>
 
 <head>
   {% include head.html %}
 </head>
 
 <body>
+  {% assign skills = site.skills | sort: 'level' | reverse %}
+  <!-- Nav -->
   {% include nav.html %}
   <!-- Header -->
   <header class="header" role="banner">
@@ -20,29 +18,53 @@
         <div id="tags">
           <h2>Tags</h2>
           <div class="tag-buttons">
-            <button class="btn" id="web-dev">Web Dev</button>
-            <button class="btn" id="ios">iOS</button>
-            <button class="btn" id="data-science">Data Science</button>
-            <button class="btn" id="server">Server</button>
-            <button class="btn" id="networking">Networking</button>
-            <button class="btn" id="databases">Databases</button>
+            <button class="btn" data-tag-name="data-science">Data Science</button>
+            <button class="btn" data-tag-name="databases">Databases</button>
+            <button class="btn" data-tag-name="ios">iOS</button>
+            <button class="btn" data-tag-name="networking">Networking</button>
+            <button class="btn" data-tag-name="server">Server</button>
+            <button class="btn" data-tag-name="web-dev">Web Dev</button>
           </div>
         </div>
         <div id="programming-language-list">
           <h2 style="text-align: center">Programming Language Skills</h2>
-          <div class="flex-container"></div>
+          {% include skill-container.html skillCategory="programming-language" %}
         </div>
         <div id="framework-library-list">
           <h2 style="text-align: center">Framework and Library Skills</h2>
-          <div class="flex-container"></div>
+          {% include skill-container.html skillCategory="framework-library" %}
         </div>
         <div id="runtime-software-list">
           <h2 style="text-align: center">Runtime Environment and Software Skills</h2>
-          <div class="flex-container"></div>
+          {% include skill-container.html skillCategory="runtime-software" %}
         </div>
       </div>
     </div>
   </header>
+
+  {% for skill in skills %} {{ skill }}
+  <div class="skill-details-modal" data-skill-title="{{ skill.title }}">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <!-- divider -->
+      {% if skill.lastUsed %}
+      <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
+      {% endif %}
+      <p>{{ skill.description }}</p>
+      {% if skill.projects %}
+      <h3>Projects Used In</h3>
+      <ul>
+        {% for project in skill.projects %}
+        <li><a href="{{ site.url }}/projects/{{ project.uri }}/">{{ project.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <button class="btn">Done</button>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Scripts -->
   {% include scripts.html %}
   <script src="{{ site.url }}/assets/js/wow.min.js"></script>
   <script src="{{ site.url }}/assets/js/custom/skill-list.js"></script>

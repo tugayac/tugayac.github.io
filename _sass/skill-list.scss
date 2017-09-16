@@ -15,11 +15,13 @@ $signal-base-height: 12px;
     flex: auto;
     border: solid 1px $color_stack;
     border-radius: $border-radius;
+    border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
 
     & > .skill-title {
       padding-right: 1em;
@@ -36,15 +38,6 @@ $signal-base-height: 12px;
         background-color: $color_mischka;
         border-radius: $border-radius;
         display: inline-block;
-        margin: 1px;
-
-        &:first-of-type {
-          margin-left: 0;
-        }
-
-        &:last-of-type {
-          margin-right: 0;
-        }
 
         &.beginner {
           height: $signal-base-height;
@@ -63,7 +56,7 @@ $signal-base-height: 12px;
         }
 
         &.active {
-          background-color: green;
+          background-color: $info;
         }
       }
     }
@@ -90,6 +83,50 @@ $signal-base-height: 12px;
 
     &.selected {
       color: $red;
+    }
+  }
+}
+
+.skill-details-modal {
+  display: none;
+
+  // Hidden by default
+  position: fixed;
+  z-index: 1;
+
+  // Always on top when shown
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  & > .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid $color_stack;
+    border-radius: 10px;
+    width: 30%;
+    text-align: right;
+
+    & > p, li, h3 {
+      text-align: left;
+    }
+
+    & > .close {
+      font-weight: bold;
+      float: right;
+      color: $color_stack;
+      font-size: 32px;
+      transition: color .15s ease-in-out;
+
+      &:hover {
+        color: $red;
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
   }
 }
