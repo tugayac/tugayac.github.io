@@ -2,14 +2,14 @@
 %btnextend {
   display: inline-block;
   border: 1px solid;
-  border-color: rgba($color_mercury, 0.5) rgba($color_bon_jour, 0.5) $color_mischka;
-  border-radius: 3px;
+  border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
+  border-radius: $button-border-radius;
   text-decoration: none;
   background: $white;
   color: $color_shark;
 
   &:hover {
-    box-shadow: 0 0 1px 0 rgba($color_shark, 0.5);
+    box-shadow: 0 0 $box-shadow-blur-radius $box-shadow-y-offset rgba($color_shark, 0.5);
     color: $red;
   }
 }
@@ -113,7 +113,7 @@ hr {
   &.hr-line {
     border: 0;
     height: 1px;
-    opacity: .15;
+    opacity: 0.3;
     margin: 1em 0;
     background-image: -webkit-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
     background-image: -moz-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
