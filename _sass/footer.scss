@@ -1,0 +1,35 @@
+footer {
+  text-align: center;
+  border-top: 1px solid $text-color;
+  position: fixed;
+  bottom: 0;
+  height: $footer-height;
+  line-height: $footer-height;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+
+  & > .social-links {
+    display: inline-block;
+
+    .social-btn {
+      height: 100%;
+      width: 50px;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      text-decoration: none;
+      background: $white;
+      color: $color_shark;
+
+      &:hover {
+        color: $red;
+      }
+
+      i {
+        font-size: 1.5em;
+        width: 100%;
+      }
+    }
+  }
+}

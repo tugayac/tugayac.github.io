@@ -23,43 +23,11 @@
         </article>
     </div>
 
-    <header class="header" role="banner">
-        <div class="container animated fadeIn">
-            <div class="row">
-
-                <h3 class="title">
-                    <a class="zoombtn" href="{{ site.url }}">
-                        <p style="font-size:1.2rem;font-weight:300">{{ site.title }}</p>
-                    </a>
-                </h3>
-                <hr class="hr-line">
-                <h3 class="title">
-                    <a href="{{ site.url }}">
-                        <p style="font-size:1rem;font-weight:300">{{ site.bio }}</p>
-                    </a>
-                </h3>
-                {% include social-links.html %}
-                <hr class="hr-line">
-                <h3 class="title">
-                    <a class="btn zoombtn" href="{{ site.url }}/about">
-                         About
-                    </a>
-                    <a class="btn zoombtn" href="{{ site.url }}/posts">
-                         Posts
-                    </a>
-                    <a class="btn zoombtn" href="{{ site.url }}/resume">
-                        Resume
-                   </a>
-                    <a class="btn zoombtn" href="{{ site.url }}/projects">
-                         Projects
-                    </a>
-                    <a class="btn zoombtn" href="{{ site.url}}/skills">
-                        Skills
-                    </a>
-                </h3>
-            </div>
+    <footer>
+        <div class="social-links">
+            {% include social-links.html %}
         </div>
-    </header>
+    </footer>
     {% include scripts.html %}
 </body>
 

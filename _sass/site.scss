@@ -12,8 +12,10 @@ html {
 }
 
 body {
-  @extend %extend1;
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 100%;
   font-family: $primary-font;
 
   @include font-rem($doc-font-size);
@@ -85,6 +87,7 @@ body {
   width: 36rem;
   margin: 0 auto;
   margin-top: $nav-height;
+  margin-bottom: $footer-height;
 
   @include transition(0.5s);
 
@@ -98,7 +101,7 @@ body {
 }
 
 .about-article {
-  padding-top: 20px;
+  padding: 15px 0;
 
   & > .main-text {
     font-size: 1.5em;
@@ -122,20 +125,9 @@ body {
   }
 }
 
-.row {
-  margin-top: 15px;
-  text-align: center;
-
-  .title {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-
-  @media #{$small} {
-    padding: 0 1em;
-    padding-top: 15px;
-    margin-top: 0;
-  }
+.goup-container {
+  z-index: 2;
+  bottom: 60px !important;
 }
 
 .wrapper {

@@ -37,7 +37,6 @@ disqus_shortname:   ardatugay
 # Social
 # if you don't have any of social below, comment the line.
 #google:
-  #plus:            #username
   #analytics:
   #verify:
   #ad-client:
@@ -49,24 +48,11 @@ email:             ardactugay@gmail.com
 github-url:        tugayac
 stackoverflow:     4548148/ardatr   from a "http://stackoverflow.com/users/123456/username" link
 linkedin:          arda-tugay-09b22861
-#xing:              username
 #instagram:          username
-#lastfm:            username
-#tumblr:            username
 #medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-#steam:              username
-#dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
 #codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
 
 # Gems
 gems:
