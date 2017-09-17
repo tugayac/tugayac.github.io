@@ -81,34 +81,44 @@ body {
   align-items: center;
 }
 
-.home-page {
-  width: 60rem;
-  margin: 0 auto;
-}
-
 .container {
   width: 36rem;
-  max-width: 550px;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  @include center-block;
-
-  background-color: $white;
-  color: $color_shark;
-  z-index: 1;
-  border-radius: 3px;
-  box-shadow: 0 0 10px 0 rgba($color_shark, 0.3);
+  margin: 0 auto;
+  margin-top: $nav-height;
 
   @include transition(0.5s);
 
   @media #{$small} {
     width: 100%;
-    box-shadow: none;
   }
 
   @media #{$medium} {
     width: 80%;
+  }
+}
+
+.about-article {
+  padding-top: 20px;
+
+  & > .main-text {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+
+  & > .sub-text {
+    font-size: 1.15em;
+    line-height: 1.5em;
+  }
+
+  a {
+    color: $active-element-color !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .15s ease-in-out;
+
+    &:hover {
+      color: $active-element-hover-color !important;
+    }
   }
 }
 

@@ -2,6 +2,7 @@
 $text-color: #000;
 $secondary-text-color: #333;
 $active-element-color: #006eff;
+$active-element-hover-color: #5BBA6F;
 $nav-link-hover: #eee;
 
 $bodycolor: #D24D57;
@@ -24,6 +25,10 @@ $color_alabaster: #fcfcfc;
 $color_celeste: #ccc;
 $color_pink_swan: #bbb;
 $comp-color: complement(#222);
+
+// Navbar
+$nav-link-hover-transition: 0.15s;
+$nav-height: 70px;
 
 //button colors
 $success: #5cb85c;
