@@ -14,7 +14,7 @@ html {
 body {
   @extend %extend1;
 
-  font-family: $font1;
+  font-family: $primary-font;
 
   @include font-rem($doc-font-size);
 
@@ -79,6 +79,11 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.home-page {
+  width: 60rem;
+  margin: 0 auto;
 }
 
 .container {

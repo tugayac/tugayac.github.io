@@ -2,6 +2,7 @@
 $text-color: #000;
 $secondary-text-color: #333;
 $active-element-color: #006eff;
+$nav-link-hover: #eee;
 
 $bodycolor: #D24D57;
 $black: #000;
@@ -31,8 +32,8 @@ $danger: #C64537;
 $info: #308cbc;
 
 //fonts
-$font1: Fira Sans, sans-serif;
-$font2: Inconsolata;
+$primary-font: Fira Sans, sans-serif;
+$code-font: Inconsolata;
 $alt-font: serif;
 $doc-font-size: 16;
 $doc-line-height: 26;
