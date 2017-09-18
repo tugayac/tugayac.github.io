@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "Improving the Home Network"
 date:   2017-09-12
 excerpt: "Since 2015, I have been running my home network on pfSense, an open source router and firewall distribution, due to my frustration with the lack of customization of traditionally \"store bought\" routers. This ongoing process has given me the ability to easily fix home network issues without the help of a third-party, block unwanted requests being made to my home network, and allowed me to host various applications on my home server."

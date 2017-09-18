@@ -65,6 +65,7 @@ body {
   margin: 0 auto;
   margin-top: $nav-height;
   margin-bottom: $footer-height;
+  color: $text-color;
 
   @include transition(0.5s);
 
@@ -79,6 +80,10 @@ body {
 
 .container {
   @include container-base(36rem);
+}
+
+.container-medium {
+  @include container-base(56rem);
 }
 
 .container-wide {
@@ -135,21 +140,12 @@ body {
 }
 
 #disqus_thread {
-  width: 75%;
-  max-width: 850px;
-  margin: -3rem auto 4rem;
-  background: $white;
-  color: $color_tuatara;
   padding: 2em;
-  border-radius: 3px;
-  box-shadow: 0 0 10px 0 rgba($color_shark, 0.3);
 
   @include transition(0.5s);
 
   @media #{$small} {
-    width: 90%;
     padding: 2em 0;
-    box-shadow: none;
   }
 }
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "A Budgeting Application"
 date:   2017-09-13
 excerpt: "Currently developing an iOS application to track my budget in a more customizable way. I have used multiple budgeting apps before (Mint, Personal Capital, and CountAbout) that could not meet my needs, such as properly splitting transactions and accounting for transactions in different currencies. Furthermore, I decided this would be a great opportunity to experiment with technologies I have not used before or integrated into my applications."

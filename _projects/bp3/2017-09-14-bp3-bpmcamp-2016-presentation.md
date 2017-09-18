@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "Presentation at BPMCamp 2016"
 date:   2017-09-14
 excerpt: "BP3 holds an annual conference where customers are invited to join us in presentation given by BP3 employees and guests. In 2016, I got to be one of those presenters, presenting on \"Design: A look from an Engineer's Perspective\""

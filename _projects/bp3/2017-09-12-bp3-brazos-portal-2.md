@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "Brazos Portal (2.0)"
 date:   2017-09-12
 excerpt: "In 2016 and 2017, I worked on BP3's process task management portal for IBM BPM. I was responsible for designing the architecture and developing the new version of our product, which utilized Elasticsearch instead of a traditional relational database."

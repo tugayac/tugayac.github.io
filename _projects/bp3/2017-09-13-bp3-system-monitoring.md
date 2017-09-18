@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "System Monitoring Application"
 date:   2017-09-13
 excerpt: "In 2014 and 2015, I worked on a BPM environment monitoring project that allowed monitoring various system and BPM-specific parameters. The system could be configured to notify sysadmins when a threshold was passed. Although eventually only used internally, this was my first and solo project at BP3."

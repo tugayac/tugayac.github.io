@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "Automated Testing Framework"
 date:   2017-09-13
 excerpt: "In the summer of 2016, I worked on developing an automated testing framework. This was a solution intended to be used to write automated UI tests for Brazos UI. However, the project was designed to be modular, such that it can be used to write automated tests for non-browser and non-BPM projects as well."
