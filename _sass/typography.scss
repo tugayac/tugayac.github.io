@@ -68,23 +68,16 @@ figcaption {
 // links
 a {
   transition: color .25s;
-  color: $color_shark;
-
-  &:link {
-    color: $color_shark;
-  }
-
-  &:visited {
-    color: $color_tuatara;
-  }
+  color: $active-element-color;
+  text-decoration: none;
 
   &:hover {
-    color: $red;
+    color: $active-element-hover-color;
   }
 
   &:active {
-    transition: color .3s;
-    color: $maroon;
+    transition: color .25s;
+    color: $text-color;
   }
 }
 

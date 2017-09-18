@@ -11,6 +11,8 @@ tag:
 - lecture
 - udemy
 comments: true
+thumbnail: udemy-logo.svg
+thumbnailCustomCSS: "padding: 10px;"
 ---
 ## Completed Courses
 * [Webpack (v2)](https://www.udemy.com/webpack-2-the-complete-developers-guide/): Learned how to use Webpack.

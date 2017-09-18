@@ -14,6 +14,7 @@ tag:
 - unix
 - terminal
 comments: true
+thumbnail: "pfsense-logo.png"
 ---
 ## Technologies Used
 * pfSense (Latest Version)

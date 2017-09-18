@@ -11,6 +11,8 @@ tag:
 - testing
 - brazos
 comments: true
+thumbnail: "cucumber-logo.png"
+thumbnailCustomCSS: "padding: 10px;"
 ---
 ## Technologies Used
 * Java (v8)

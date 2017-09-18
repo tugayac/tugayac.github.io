@@ -10,5 +10,5 @@ description: "I've used Go for concurrent programming and was pleased with the r
 lastUsed: "2015"
 projects:
   - title: "BPM Monitoring"
-    uri: bp3-bpm-monitoring
+    uri: bp3-system-monitoring
 ---

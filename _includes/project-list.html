@@ -1,9 +1,19 @@
 <div class="post-list">
-  {% for project in site.projects %} {% if project.type == include.projectType %}
+  {% for project in site.projects %} {% if (project.type == include.projectType) and (project.hide == false) %}
   <ul>
-    <li class="post-summary" data-wow-duration="1.5s">
-      <a class="title zoombtn" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
-      <p>{{ project.excerpt }} <a href="{{ site.url }}{{ project.url }}">Read More</a></p>
+    <li class="post-summary">
+      <div class="flex">
+        <div class="item image">
+          {% if project.thumbnail %}
+          <a href="{{ site.url }}{{ project.url }}"><img style="{{ project.thumbnailCustomCSS }}" src="{{ site.url }}/assets/img/projects/thumbnails/{{ project.thumbnail }}"></a>          {% endif %}
+        </div>
+        <div class="item">
+          <a href="{{ site.url }}{{ project.url }}">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.excerpt }}</p>
+          </a>
+        </div>
+      </div>
     </li>
     <hr>
   </ul>

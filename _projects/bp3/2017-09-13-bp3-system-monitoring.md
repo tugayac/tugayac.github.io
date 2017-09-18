@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BPM Monitoring"
+title:  "System Monitoring Application"
 date:   2017-09-13
 excerpt: "In 2014 and 2015, I worked on a BPM environment monitoring project that allowed monitoring various system and BPM-specific parameters. The system could be configured to notify sysadmins when a threshold was passed. Although eventually only used internally, this was my first and solo project at BP3."
 type: "work"
@@ -11,6 +11,7 @@ tag:
 - system
 - sysadmin
 comments: true
+thumbnail: system-monitoring.png
 ---
 ## Technologies Used
 * Go
@@ -76,6 +77,11 @@ When Sensu detected problems, it was configured to forward this information to a
 
 #### Why Go?
 At the time, the Go language was recently released and was praised for its excellence at concurrent programming. Seeing as our goal was to create scalable software, Go was the perfect candidate.
+
+<figure>
+  <a href="{{ site.url }}/assets/img/projects/system-monitoring/architecture.png"><img src="{{ site.url }}/assets/img/projects/system-monitoring/architecture.png"></a>
+  <center><figcaption>A high-level architecture diagram, showing all the interconnected modules. The Synchronizer and Notifier was programmed in Go and use Redis to keep track of related tickets.</figcaption></center>
+</figure>
 
 ## Difficulties Faced
 The biggest problems faced were due to security constraints of customers:

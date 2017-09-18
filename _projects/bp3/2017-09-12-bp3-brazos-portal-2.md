@@ -11,6 +11,7 @@ tag:
 - process
 - management
 comments: true
+thumbnail: "brazos-portal.png"
 ---
 ## Technologies Used
 * Java (v8)

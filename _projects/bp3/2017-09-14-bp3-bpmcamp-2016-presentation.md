@@ -11,6 +11,7 @@ tag:
 - testing
 - brazos
 comments: true
+thumbnail: "mental-models.svg"
 ---
 **Note: Unfortunately, I cannot provide the presentation slides as it's considered proprietary and confidential. I will put up a link to it, if this every changes.**
 

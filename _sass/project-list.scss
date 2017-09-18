@@ -3,4 +3,47 @@
     text-align: center;
     margin: 0;
   }
+
+  .flex {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+
+      img {
+        box-shadow: 0 0 10px 1px rgba($active-element-color, 0.5) !important;
+      }
+
+      a {
+        color: $active-element-color;
+      }
+    }
+
+    .item {
+      flex: 1 1 20%;
+
+      a {
+        h2 {
+          text-align: left;
+        }
+      }
+
+      &.image {
+        max-width: 30%;
+
+        a {
+          display: block;
+          padding: 20px;
+
+          img {
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            max-height: 200px;
+            transition: box-shadow .25s ease-in-out;
+          }
+        }
+      }
+    }
+  }
 }

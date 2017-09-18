@@ -13,6 +13,7 @@ tag:
 - mobile
 - development
 comments: true
+thumbnail: budgeting-app.svg
 ---
 ## Technologies Used
 The following technologies are currently being used for this project:

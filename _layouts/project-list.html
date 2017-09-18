@@ -9,11 +9,10 @@
 <body>
     {% include nav.html %}
     <!-- Header -->
-    <header class="header" role="banner">
-        <div class="wrapper animated fadeIn">
+    <article>
+        <div class="container-wide animated fadeIn">
             <div class="content project-content">
-                {% include page-header.html %}
-                <h2>Projects at BP3</h2>
+                <h2>Work-Related Projects</h2>
                 {% include project-list.html projectType="work" %}
                 <h2>Personal Projects</h2>
                 {% include project-list.html projectType="personal" %}
@@ -21,7 +20,7 @@
                         rel="noopener noreferrer">GitHub</a> page.</h2>
             </div>
         </div>
-    </header>
+    </article>
     {% include scripts.html %}
     <script src="{{ site.url }}/assets/js/wow.min.js"></script>
     <script type="text/javascript">
