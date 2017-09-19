@@ -1,21 +1,31 @@
+.flex-header {
+  & > .col-3.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  a {}
+}
+
 $signal-base-width: 10px;
 $signal-base-height: 12px;
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-
-  @media (max-width: 767px) {
-    flex-direction: column;
-  }
-
+@mixin skill-container($border, $width: null, $flex: 1 0 20%) {
   & > .skill-container {
+    @if width != null {
+      width: $width;
+    }
+
     display: flex;
-    flex: 1 0 20%;
-    border: solid 1px $color_stack;
-    border-radius: $border-radius;
-    border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
+    flex: $flex;
+
+    @if $border {
+      border: solid 1px $color_stack;
+      border-radius: $border-radius;
+      border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
+    }
+
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -24,15 +34,17 @@ $signal-base-height: 12px;
     cursor: pointer;
     transition: box-shadow .15s ease-in-out;
 
-    &:hover {
-      @include default-box-shadow(0.25);
+    @if $border {
+      &:hover {
+        @include default-box-shadow(0.25);
 
-      .skill-title {
-        color: $active-element-hover-color;
-      }
+        .skill-title {
+          color: $active-element-hover-color;
+        }
 
-      .skill-level > .signal-bar.active {
-        background-color: $active-element-hover-color;
+        .skill-level > .signal-bar.active {
+          background-color: $active-element-hover-color;
+        }
       }
     }
 
@@ -82,6 +94,34 @@ $signal-base-height: 12px;
   }
 }
 
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include skill-container(false, 225px, 1 0 auto);
+
+  & > .description-container {
+    text-align: justify;
+
+    & > hr {
+      margin-top: 0;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @include skill-container(true);
+}
+
 #tags {
   display: flex;
   align-items: center;
@@ -106,7 +146,7 @@ $signal-base-height: 12px;
   }
 }
 
-.skill-details-modal {
+.modal {
   display: none;
 
   // Hidden by default

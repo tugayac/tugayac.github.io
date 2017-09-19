@@ -59,7 +59,7 @@ tagButtons.each(function () {
 /*** Skill Details Modal ***/
 var $skillDetailsModal = $('.skill-details-modal');
 $skillDetailsModal.on('click', function (event) {
-  if (event.target.id === 'skill-details-modal') {
+  if ($(event.target).hasClass('skill-details-modal')) {
     $skillDetailsModal.css('display', 'none');
     document.body.style.overflow = 'initial';
   }
@@ -79,3 +79,27 @@ $skillContainers.on('click', function (event) {
   $relatedModal.css('display', 'block');
 });
 /*** END Skill Details Modal ***/
+
+/*** Skill Level Info Modal ***/
+var $skillLevelInfoModal = $('#skill-level-info-modal');
+var $skillLevelInfoModalButton = $('.col-3.info > .btn');
+$skillLevelInfoModal.on('click', function (event) {
+  if (event.target.id === 'skill-level-info-modal') {
+    $skillLevelInfoModal.css('display', 'none');
+    document.body.style.overflow = 'initial';
+  }
+});
+$skillLevelInfoModal.find('.close').on('click', function (event) {
+  $skillLevelInfoModal.css('display', 'none');
+  document.body.style.overflow = 'initial';
+});
+$skillLevelInfoModal.find('.btn').on('click', function (event) {
+  $skillLevelInfoModal.css('display', 'none');
+  document.body.style.overflow = 'initial';
+});
+
+$skillLevelInfoModalButton.on('click', function () {
+  document.body.style.overflow = 'hidden';
+  $skillLevelInfoModal.css('display', 'block');
+});
+/*** END Skill Level Info Modal ***/
