@@ -93,13 +93,30 @@ body {
 .about-article {
   padding: 15px 0;
 
-  & > .main-text {
+  img.profile-pic {
+    float: left;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin-right: 25px;
+  }
+
+  & > .text {
+    text-align: justify;
+  }
+
+  & > .large-text {
     font-size: 1.5em;
     line-height: 1.5em;
   }
 
-  & > .sub-text {
+  & > .medium-text {
     font-size: 1.15em;
+    line-height: 1.5em;
+  }
+
+  & > .small-text {
+    font-size: 1em;
     line-height: 1.5em;
   }
 
@@ -258,8 +275,4 @@ header .entry-meta {
     background-blend-mode: multiply;
     background-position: center center;
   }
-}
-
-a.btn.zoombtn {
-  margin: 0.67em 0;
 }
