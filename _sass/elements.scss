@@ -14,84 +14,6 @@
   }
 }
 
-.btn {
-  padding: 10px 18px;
-
-  @include font-rem(14);
-
-  margin: 4px auto;
-
-  @extend %btnextend;
-
-  &.btn-success {
-    background-color: $success;
-    color: $white;
-    border-color: $success;
-
-    &:visited {
-      color: $white;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $success;
-    }
-  }
-
-  &.btn-warning {
-    background-color: $warning;
-    color: $white;
-    border-color: $warning;
-
-    &:visited {
-      color: $white;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $warning;
-    }
-  }
-
-  &.btn-danger {
-    background-color: $danger;
-    color: $white;
-    border-color: $danger;
-
-    &:visited {
-      color: $white;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $danger;
-    }
-  }
-
-  &.btn-info {
-    background-color: $info;
-    color: $white;
-    border-color: $info;
-
-    &:visited {
-      color: $white;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $info;
-    }
-  }
-}
-
-.title .btn {
-  margin: 10px;
-
-  @include font-rem(16);
-
-  font-weight: 300;
-}
-
 // hr break
 hr {
   border: 0;
@@ -231,4 +153,14 @@ kbd {
   text-align: center;
   font-weight: 300;
   margin-bottom: 10px;
+}
+
+a.btn {
+  color: $active-element-color;
+  transition: color .15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $active-element-hover-color !important;
+  }
 }

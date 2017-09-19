@@ -12,7 +12,7 @@ $signal-base-height: 12px;
 
   & > .skill-container {
     display: flex;
-    flex: auto;
+    flex: 1 0 20%;
     border: solid 1px $color_stack;
     border-radius: $border-radius;
     border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
@@ -22,10 +22,26 @@ $signal-base-height: 12px;
     margin: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+    transition: box-shadow .15s ease-in-out;
+
+    &:hover {
+      @include default-box-shadow(0.25);
+
+      .skill-title {
+        color: $active-element-hover-color;
+      }
+
+      .skill-level > .signal-bar.active {
+        background-color: $active-element-hover-color;
+      }
+    }
 
     & > .skill-title {
       padding-right: 1em;
       text-align: right;
+      flex: 1 1 auto;
+      color: $active-element-color;
+      transition: color .15s ease-in-out;
 
       @media (max-width: 767px) {
         text-align: center;
@@ -33,6 +49,8 @@ $signal-base-height: 12px;
     }
 
     & > .skill-level {
+      flex: 1 0 auto;
+
       & > .signal-bar {
         width: $signal-base-width;
         background-color: $color_mischka;
@@ -56,7 +74,8 @@ $signal-base-height: 12px;
         }
 
         &.active {
-          background-color: $info;
+          background-color: $active-element-color;
+          transition: background-color .15s ease-in-out;
         }
       }
     }
@@ -74,15 +93,15 @@ $signal-base-height: 12px;
   & > .tag-buttons {
     display: flex;
     flex-wrap: wrap;
-  }
 
-  .btn {
-    outline: none;
-    white-space: nowrap;
-    margin: 5px;
+    & > a.btn {
+      font-weight: 700;
+      font-size: 1.5em;
+      margin: 0 10px;
 
-    &.selected {
-      color: $red;
+      &.selected {
+        color: $active-element-hover-color;
+      }
     }
   }
 }
@@ -107,7 +126,7 @@ $signal-base-height: 12px;
     margin: 5% auto;
     padding: 20px;
     border: 1px solid $color_stack;
-    border-radius: 10px;
+    border-radius: $border-radius;
     width: 30%;
     text-align: right;
 
@@ -115,15 +134,19 @@ $signal-base-height: 12px;
       text-align: left;
     }
 
+    & > a.btn.done {
+      font-weight: 700;
+    }
+
     & > .close {
       font-weight: bold;
       float: right;
-      color: $color_stack;
+      color: rgba($secondary-text-color, 0.5);
       font-size: 32px;
       transition: color .15s ease-in-out;
 
       &:hover {
-        color: $red;
+        color: $active-element-color;
         text-decoration: none;
         cursor: pointer;
       }
