@@ -5,8 +5,8 @@ $(document).ready(function () {
     case '/':
       $('#nav-item-about').addClass('active');
       break;
-    case '/blog/':
-      $('#nav-item-blog').addClass('active');
+    case '/resume/':
+      $('#nav-item-resume').addClass('active');
       break;
     case '/projects/':
       $('#nav-item-projects').addClass('active');

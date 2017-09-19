@@ -137,25 +137,6 @@ body {
   bottom: 60px !important;
 }
 
-.wrapper {
-  width: 75%;
-  max-width: 850px;
-  margin: 4rem auto;
-  background: $white;
-  color: $color_tuatara;
-  padding: 2em;
-  border-radius: $border-radius;
-  box-shadow: 0 0 10px 0 rgba($color_shark, 0.3);
-
-  @include transition(0.5s);
-
-  @media #{$small} {
-    width: 90%;
-    padding: 0;
-    box-shadow: none;
-  }
-}
-
 #disqus_thread {
   padding: 2em;
 

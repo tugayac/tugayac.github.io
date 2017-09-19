@@ -1,6 +1,6 @@
 --- layout: compress ---
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 
 <head>
   {% include head.html %}
@@ -12,7 +12,7 @@
   {% include nav.html %}
   <!-- Header -->
   <header class="header" role="banner">
-    <div class="wrapper animated fadeIn">
+    <div class="container-wide animated fadeIn">
       <div class="content">
         {% include page-header.html %}
         <div id="tags">
@@ -66,11 +66,7 @@
 
   <!-- Scripts -->
   {% include scripts.html %}
-  <script src="{{ site.url }}/assets/js/wow.min.js"></script>
   <script src="{{ site.url }}/assets/js/custom/skill-list.js"></script>
-  <script type="text/javascript">
-    (new WOW).init();
-  </script>
 </body>
 
 </html>
