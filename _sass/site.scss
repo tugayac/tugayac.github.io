@@ -79,7 +79,7 @@ body {
 }
 
 .container {
-  @include container-base(36rem);
+  @include container-base(40rem);
 }
 
 .container-medium {
@@ -96,9 +96,10 @@ body {
   img.profile-pic {
     float: left;
     border-radius: 50%;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     margin-right: 25px;
+    object-fit: cover;
   }
 
   & > .text {
