@@ -1,34 +1,36 @@
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   border-top: 1px solid $text-color;
   position: fixed;
   bottom: 0;
   height: $footer-height;
-  line-height: $footer-height;
   width: 100%;
   background-color: #fff;
   z-index: 1;
 
-  & > .social-links {
-    display: inline-block;
+  @media #{$small} {
+    height: 40px;
+  }
 
-    .social-btn {
-      height: 100%;
-      width: 50px;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-      text-decoration: none;
-      background: $white;
-      color: $color_shark;
+  .social-btn {
+    display: flex;
+    align-items: center;
+    flex: 0 0 50px;
+    background: $white;
+    color: $text-color;
 
-      &:hover {
-        color: $active-element-color;
-      }
+    &:hover {
+      color: $active-element-color;
+    }
 
-      i {
-        font-size: 1.5em;
-        width: 100%;
+    i {
+      font-size: 1.5em;
+      width: 100%;
+
+      @media #{$small} {
+        font-size: 1.25em;
       }
     }
   }

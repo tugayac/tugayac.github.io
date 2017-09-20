@@ -4,84 +4,156 @@
 }
 
 nav {
-  top: 0;
   position: fixed;
-  min-height: $nav-height;
+  top: 0;
+  height: $nav-height;
   z-index: 1;
   width: 100%;
-  border-bottom: 1px solid $text-color;
   background-color: #fff;
+  border-bottom: 1px solid $text-color;
+  display: flex;
 
-  & > .fluid-container {
-    height: $nav-height;
-    position: absolute;
-    left: 40px;
-    right: 40px;
+  @media #{$small} {
+    transition: all .25s ease;
+  }
 
-    & > .logo-container {
-      display: inline-block;
-      height: 100%;
-      line-height: $nav-height;
+  &.shrink {
+    height: 40px;
 
-      .logo {
-        height: 50px;
-        width: 50px;
-        display: inline-block;
-        vertical-align: middle;
+    & > .logo-container > span {
+      font-size: 1em;
+    }
 
-        & > img {
-          border-radius: 50%;
-        }
-      }
-
-      & > span {
-        font-size: 1.15em;
-        vertical-align: middle;
-        padding-left: 0.67em;
-      }
+    & > .menu-icon > a {
+      padding-bottom: 0;
+      padding-top: 0;
     }
 
     & > .fluid-menu-container {
-      display: inline-block;
+      top: 40px;
+    }
+  }
+
+  &.menu-open {
+    border-bottom: none;
+  }
+
+  & > .logo-container {
+    display: flex;
+    flex: 0 0 25%;
+    align-items: center;
+
+    @media #{$small} {
+      padding-left: 20px;
+      flex: 0 0 50%;
+    }
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      margin-left: 40px;
+
+      & > img {
+        border-radius: 50%;
+      }
+
+      @media #{$small} {
+        display: none;
+      }
+    }
+
+    & > span {
+      font-size: 1.15em;
+      vertical-align: middle;
+      padding-left: 0.67em;
+
+      @media #{$small} {
+        padding: 0;
+      }
+    }
+  }
+
+  & > .fluid-menu-container {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: stretch;
+
+    @media #{$small} {
+      // jQuery will add "flex"
+      display: none;
+      flex: none;
+      flex-direction: column;
+      justify-content: initial;
+      align-items: stretch;
       position: absolute;
-      right: 0;
+      top: 70px;
+      right: initial;
       width: 100%;
-      height: 100%;
-      text-align: center;
-      line-height: $nav-height;
+      line-height: initial;
+      border-bottom: solid 1px $text-color;
+      background-color: #fff;
+    }
 
-      & > .menu-items {
-        ul {
-          margin: 0;
+    & > div {
+      & > a {
+        text-decoration: none;
+        padding: 0 25px;
+        display: inline-block;
+        color: $text-color;
+        line-height: 70px;
+
+        @media #{$small} {
+          width: 100%;
           padding: 0;
-          list-style: none;
-
-          li {
-            display: inline-block;
-            cursor: pointer;
-            transition: background-color $nav-link-hover-transition ease-in-out, box-shadow $nav-link-hover-transition ease-in-out;
-
-            & > a {
-              text-decoration: none;
-              padding: 0 25px;
-              height: 100%;
-              display: inline-block;
-              color: $text-color;
-
-              &:hover {
-                color: $text-color;
-              }
-            }
-
-            &.active {
-              @include item-highlight(-3px);
-            }
-
-            &:hover:not(.active) {
-              @include item-highlight(-1px);
-            }
-          }
+          text-align: center;
         }
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+
+      &.active {
+        @include item-highlight(-3px);
+
+        @media #{$small} {
+          box-shadow: none;
+        }
+      }
+
+      &:hover:not(.active) {
+        @include item-highlight(-1px);
+
+        @media #{$small} {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  & > .menu-icon {
+    display: none;
+
+    @media #{$small} {
+      display: flex;
+      padding-right: 10px;
+      flex: 0 0 50%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    & > a {
+      color: $text-color;
+      padding: 10px;
+      display: inline-block;
+
+      &:hover {
+        color: $text-color;
+      }
+
+      & > i {
+        display: block;
       }
     }
   }

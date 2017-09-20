@@ -200,11 +200,6 @@ body {
 
 header .entry-meta {
   display: none;
-
-  // hide header meta on small screens
-  @media #{$notsmall} {
-    display: block;
-  }
 }
 
 .entry-title a {
@@ -246,15 +241,15 @@ header .entry-meta {
     background-position: center center;
   }
 
-  @media #{$notsmall} {
-    color: white;
-    padding: 10em;
-    margin-left: -4rem;
-    margin-right: -4rem;
-    margin-top: -2rem;
-    border-radius: 3px 3px 0 0;
-    background-color: rgba($black, 0.6);
-    background-blend-mode: multiply;
-    background-position: center center;
-  }
+  // @media #{$notsmall} {
+  //   color: white;
+  //   padding: 10em;
+  //   margin-left: -4rem;
+  //   margin-right: -4rem;
+  //   margin-top: -2rem;
+  //   border-radius: 3px 3px 0 0;
+  //   background-color: rgba($black, 0.6);
+  //   background-blend-mode: multiply;
+  //   background-position: center center;
+  // }
 }

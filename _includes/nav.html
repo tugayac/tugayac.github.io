@@ -1,18 +1,18 @@
 <nav>
-    <div class="fluid-container">
-        <div class="logo-container">
-            <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/{{ site.logo }}" class="animated rotateIn"></a>
-            <span>Arda C. Tugay</span>
-        </div>
-        <div class="fluid-menu-container">
-            <div class="menu-items">
-                <ul>
-                    <li id="nav-item-about"><a href="{{ site.url }}">About</a></li>
-                    <li id="nav-item-resume"><a href="{{ site.url }}/resume/">Resume</a></li>
-                    <li id="nav-item-projects"><a href="{{ site.url }}/projects/">Projects</a></li>
-                    <li id="nav-item-skills"><a href="{{ site.url }}/skills/">Skills</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="logo-container">
+        <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/{{ site.logo }}" class="animated rotateIn"></a>
+        <span>Arda C. Tugay</span>
+    </div>
+    <div class="menu-icon">
+        <a>
+            <i class="fa fa-bars fa-2x"></i>
+            <i class="fa fa-times fa-2x" style="display: none;"></i>
+        </a>
+    </div>
+    <div class="fluid-menu-container">
+        <div id="nav-item-about"><a href="{{ site.url }}">About</a></div>
+        <div id="nav-item-resume"><a href="{{ site.url }}/resume/">Resume</a></div>
+        <div id="nav-item-projects"><a href="{{ site.url }}/projects/">Projects</a></div>
+        <div id="nav-item-skills"><a href="{{ site.url }}/skills/">Skills</a></div>
     </div>
 </nav>
