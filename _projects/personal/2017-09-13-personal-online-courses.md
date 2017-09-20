@@ -1,7 +1,6 @@
 ---
 layout: project
 title:  "Online Courses"
-date:   2017-09-13
 excerpt: "Occasionally, I will take online courses around topics that I'm interested in, to further my knowledge in those areas. Currently taking courses for Data Science (in Python and R) and Unity3D."
 type: "personal"
 tag:

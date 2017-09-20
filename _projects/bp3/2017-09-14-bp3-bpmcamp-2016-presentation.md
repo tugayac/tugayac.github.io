@@ -1,7 +1,6 @@
 ---
 layout: project
 title:  "Presentation at BPMCamp 2016"
-date:   2017-09-14
 excerpt: "BP3 holds an annual conference where customers are invited to join us in presentation given by BP3 employees and guests. In 2016, I got to be one of those presenters, presenting on \"Design: A look from an Engineer's Perspective\""
 type: "work"
 tag:
@@ -13,13 +12,13 @@ tag:
 comments: true
 thumbnail: "mental-models.svg"
 ---
-**Note: Unfortunately, I cannot provide the presentation slides as it's considered proprietary and confidential. I will put up a link to it, if this every changes.**
+**Note: Unfortunately, I cannot provide the presentation slides as it's considered proprietary and confidential. I will put up a link to it, if this changes.**
 
-In 2016's BPMCamp, I got the chance to present on the topic of "Design: A look from an Engineer's Perspective". This was my opportunity to show both coworkers and BP3 customers what design means to engineers, and why it should be important for engineers as well.
+At 2016's BPMCamp, I got the chance to present on the topic of "Design: A look from an Engineer's Perspective". This was my opportunity to show both coworkers and BP3 customers what design means to engineers, and why it's important for them as well.
 
-The idea behind "design thinking" was that we should learn to keep it simple and uncluttered (though this may change depending on your audience. For example, culturally speaking, people have different expectations of websites in Japan compared to the US) while also periodically performing usability tests of our product, so that we know it meets end user demands.
+The idea behind "design thinking" was that we should learn to keep the UI simple and uncluttered (though this may change depending on your audience. For example, culturally speaking, people have different expectations of websites in Japan compared to the US) while also periodically performing usability tests of our product, so that we know it meets end user demands. 
 
-Another crucial point was that as engineers, we need to be able to take what customers want and turn it into what customers need. Often times, customers will know what they want, but will lack the technical language to express what they want. We need to be able to take this and turn it into what they need. And the best way to find this out is to perform periodic usability tests.
+Another crucial point was that as engineers, we need to be able to take what customers want and and from that, interpret what they need as more often than not, customers will know what they want, but will lack the technical language to express what they need. And the best way to find this out is to perform periodic usability tests.
 
 <figure>
   <a href="http://s3.amazonaws.com/theoatmeal-img/comics/design_hell/1.png"><img src="http://s3.amazonaws.com/theoatmeal-img/comics/design_hell/1.png"></a>

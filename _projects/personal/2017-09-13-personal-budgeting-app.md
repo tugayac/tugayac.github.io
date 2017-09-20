@@ -1,7 +1,6 @@
 ---
 layout: project
 title:  "A Budgeting Application"
-date:   2017-09-13
 excerpt: "Currently developing an iOS application to track my budget in a more customizable way. I have used multiple budgeting apps before (Mint, Personal Capital, and CountAbout) that could not meet my needs, such as properly splitting transactions and accounting for transactions in different currencies. Furthermore, I decided this would be a great opportunity to experiment with technologies I have not used before or integrated into my applications."
 type: "personal"
 tag:
@@ -14,21 +13,16 @@ tag:
 - development
 comments: true
 thumbnail: budgeting-app.svg
+technologiesUsed:
+- "NodeJS/JavaScript (ES2015)"
+- "ExpressJS (4.x)"
+- "GraphQL"
+- "MongoDB (3.x)"
+- "iOS (11)"
+- "Swift (4)"
+- "Redis"
+- "Docker"
 ---
-## Technologies Used
-The following technologies are currently being used for this project:
-* NodeJS/JavaScript (ES2015)
-* ExpressJS (v4.x)
-* GraphQL (for NodeJS)
-* MongoDB (v3.x)
-* iOS (11) and Swift (4)
-* Redis (for caching)
-* Docker
-I intend to introduce the following technologies in the future:
-* ElasticSearch
-* RxJS
-* Android/Java
-
 ## Introduction
 For the past year, I've tried out several budgeting applications, including Mint, Personal Capital, and CountAbout. However, none of these applications seem to suit my needs. After searching for a while, I realized I needed an application that:
 * Allows me to roll over amounts left over in one budget category to other budget categories at the end of a budgetary period.
@@ -133,4 +127,4 @@ In the future, I'm planning to integrate RxJS into NodeJS to allow for reactive 
 I will be updating the architecture diagram once I incorporate security measures into the stack.
 
 ### Android and Web Application
-Once the iOS application is stable and ready for release, I plan on making an Android application, as well as a web application.
+Once the iOS application is stable and ready for release, I plan on building an Android application (and potentially a web application).

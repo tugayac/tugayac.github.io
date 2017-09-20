@@ -1,4 +1,6 @@
 .flex-header {
+  margin-bottom: 10px;
+
   h1 {
     margin: 0;
   }
@@ -16,5 +18,17 @@
     & > span {
       vertical-align: middle;
     }
+  }
+}
+
+.content {
+  .tech-tag {
+    display: inline;
+    background-color: $secondary-text-color;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 5px;
+    border-radius: $border-radius;
+    opacity: 0.5;
   }
 }

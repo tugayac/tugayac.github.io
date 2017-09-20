@@ -1,7 +1,6 @@
 ---
 layout: project
 title:  "Improving the Home Network"
-date:   2017-09-12
 excerpt: "Since 2015, I have been running my home network on pfSense, an open source router and firewall distribution, due to my frustration with the lack of customization of traditionally \"store bought\" routers. This ongoing process has given me the ability to easily fix home network issues without the help of a third-party, block unwanted requests being made to my home network, and allowed me to host various applications on my home server."
 type: "personal"
 tag:
@@ -15,12 +14,11 @@ tag:
 - terminal
 comments: true
 thumbnail: "pfsense-logo.png"
+technologiesUsed:
+  - "pfSense"
+  - "CentOS (6.5)"
+  - "Ubuntu Server (14+ LTS)"
 ---
-## Technologies Used
-* pfSense (Latest Version)
-* CentOS (v6.5)
-* Ubuntu Server (v14+ LTS)
-
 ## Introduction
 Beginning in 2015, I desired more control over my home network setup to be able to easily host web servers, Docker containers, and game servers for friends. As a developer who loves experimenting with new technology, customization of firewall and NAT (Network Address Translation) configurations have been crucial to me.
 
