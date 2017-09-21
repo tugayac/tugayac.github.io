@@ -50,6 +50,10 @@
             border-radius: 3px;
             max-height: 200px;
             transition: box-shadow .25s ease-in-out;
+
+            &[src$='.svg'] {
+              max-width: 250px;
+            }
           }
         }
       }

@@ -73,6 +73,8 @@ body {
     margin-top: $uhd-nav-height;
   }
 
+  max-width: 100%;
+
   @include transition(0.5s);
 
   @media #{$text-small} {

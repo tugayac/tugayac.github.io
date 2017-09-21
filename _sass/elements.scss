@@ -90,6 +90,12 @@ figure {
       @media #{$small} {
         flex: 1 1 auto;
       }
+
+      & > img {
+        @media #{$small} {
+          max-width: 80%;
+        }
+      }
     }
   }
 
@@ -102,6 +108,12 @@ figure {
 
       @media #{$small} {
         flex: 1 1 auto;
+      }
+
+      & > img {
+        @media #{$small} {
+          max-width: 80%;
+        }
       }
     }
   }
