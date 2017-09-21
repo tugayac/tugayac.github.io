@@ -12,16 +12,17 @@ nav {
   background-color: #fff;
   border-bottom: 1px solid $text-color;
   display: flex;
-
-  @media #{$small} {
-    transition: all .25s ease;
-  }
+  transition: all .25s ease;
 
   &.shrink {
     height: 40px;
 
-    & > .logo-container > span {
-      font-size: 1em;
+    & > .logo-container {
+      & > .logo {}
+
+      & > span {
+        font-size: 1em;
+      }
     }
 
     & > .menu-icon > a {
