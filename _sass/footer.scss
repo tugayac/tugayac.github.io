@@ -14,10 +14,14 @@ footer {
     height: $footer-small-height;
   }
 
+  @media #{$large} {
+    height: $uhd-footer-height;
+  }
+
   .social-btn {
     display: flex;
     align-items: center;
-    flex: 0 0 50px;
+    flex: 0 0 4em;
     background: $white;
     color: $text-color;
 

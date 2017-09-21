@@ -59,15 +59,15 @@ body {
 
 @mixin container-base($width) {
   width: $width;
-
-  @media #{$large} {
-    width: $width + 16;
-  }
-
   margin: 0 auto;
   margin-top: $nav-height;
   margin-bottom: $footer-height;
   color: $text-color;
+
+  @media #{$large} {
+    width: $width + 16;
+    margin-top: $uhd-nav-height;
+  }
 
   @include transition(0.5s);
 
