@@ -13,6 +13,10 @@ body {
 
   @include font-rem($doc-font-size);
 
+  @media #{$text-small} {
+    @include font-rem($small-font-size);
+  }
+
   @media #{$large} {
     @include font-rem($uhd-font-size);
   }
@@ -107,19 +111,11 @@ body {
     & > .large-text {
       font-size: 1.5em;
       line-height: 1.5em;
-
-      @media #{$text-small} {
-        font-size: 1.35em;
-      }
     }
 
     & > .medium-text {
       font-size: 1.15em;
       line-height: 1.5em;
-
-      @media #{$text-small} {
-        font-size: 1.1em;
-      }
     }
 
     & > .small-text {
