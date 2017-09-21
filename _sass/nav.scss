@@ -18,10 +18,8 @@ nav {
     height: 40px;
 
     & > .logo-container {
-      & > .logo {}
-
-      & > span {
-        font-size: 1em;
+      & > .logo {
+        visibility: hidden;
       }
     }
 
@@ -97,17 +95,25 @@ nav {
     }
 
     & > div {
+      display: flex;
+      flex: 0 0 100px;
+      justify-content: center;
+      align-items: stretch;
+
+      @media #{$small} {
+        flex: 0 0 70px;
+      }
+
       & > a {
-        text-decoration: none;
         padding: 0 25px;
-        display: inline-block;
+        flex: 0 0 100%;
         color: $text-color;
-        line-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media #{$small} {
-          width: 100%;
           padding: 0;
-          text-align: center;
         }
 
         &:hover {

@@ -17,6 +17,8 @@ $(document).ready(function () {
   }
 });
 
+var menuOpenFadeDuration = 200;
+
 var $nav = $('nav');
 var $navMenuItems = $nav.find('.fluid-menu-container');
 var $menuIcon = $nav.find('.menu-icon');
@@ -24,8 +26,8 @@ var $barsIcon = $menuIcon.find('i.fa-bars');
 var $timesIcon = $menuIcon.find('i.fa-times');
 $menuIcon.on('click', function () {
   if ($nav.hasClass('menu-open')) {
-    $navMenuItems.slideUp({
-      duration: 400,
+    $navMenuItems.fadeOut({
+      duration: menuOpenFadeDuration,
       easing: 'linear',
       complete: function () {
         $nav.removeClass('menu-open');
@@ -37,18 +39,18 @@ $menuIcon.on('click', function () {
     });
   } else {
     $nav.addClass('menu-open');
-    $navMenuItems.slideDown({
+    $navMenuItems.fadeIn({
       start: function () {
         $(this).css({
           display: 'flex'
         });
       },
-      duration: 400,
+      duration: menuOpenFadeDuration,
       easing: 'linear'
     });
 
-    $barsIcon.fadeOut(200, function () {
-      $timesIcon.fadeIn(200);
+    $barsIcon.fadeOut(menuOpenFadeDuration / 2, function () {
+      $timesIcon.fadeIn(menuOpenFadeDuration / 2);
     });
   }
 });
@@ -59,4 +61,13 @@ $(window).scroll(function () {
   } else {
     $nav.removeClass('shrink');
   }
-})
+});
+
+$(window).resize(function () {
+  $nav.removeClass('menu-open');
+  if ($navMenuItems.css('display') !== 'none') {
+    $navMenuItems.css('display', '');
+  }
+  $barsIcon.css('display', '');
+  $timesIcon.css('display', 'none');
+});

@@ -47,11 +47,11 @@ $doc-font-size: 16;
 $doc-line-height: 26;
 
 // Media Queries
-// 767px- for base font 16px
-$small: "only screen and (max-width: 48em)";
+// 960px- for base font 16px
+$small: "only screen and (max-width: 60em)";
 
-// Between 768px and 1920px for base font 16px
-$medium: "only screen and (min-width: 48.1em) and (max-width: 120em)";
+// Between 961px and 1920px for base font 16px
+$medium: "only screen and (min-width: 60.1em) and (max-width: 120em)";
 
 // 1921px+ for base font 16px
 $large: "only screen and (min-width: 120.1em)";
