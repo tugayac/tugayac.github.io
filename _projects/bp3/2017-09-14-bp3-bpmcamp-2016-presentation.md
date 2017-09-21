@@ -11,6 +11,7 @@ tag:
 - brazos
 comments: true
 thumbnail: "mental-models.svg"
+thumbnailCustomCSS: "max-width: unset;"
 ---
 **Note: Unfortunately, I cannot provide the presentation slides as it's considered proprietary and confidential. I will put up a link to it, if this changes.**
 

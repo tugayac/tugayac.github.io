@@ -8,6 +8,11 @@
     display: flex;
     align-items: center;
 
+    @media #{$text-small} {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     &:hover {
       cursor: pointer;
 
@@ -23,17 +28,21 @@
     .item {
       flex: 1 1 20%;
 
-      a {
-        h2 {
-          text-align: left;
-        }
+      @media #{$text-small} {
+        flex: 1 1 auto;
       }
 
       &.image {
         max-width: 30%;
 
+        @media #{$text-small} {
+          max-width: 80%;
+        }
+
         a {
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           padding: 20px;
 
           img {
@@ -41,6 +50,34 @@
             border-radius: 3px;
             max-height: 200px;
             transition: box-shadow .25s ease-in-out;
+          }
+        }
+      }
+
+      &.description {
+        & > a {
+          h3 {
+            i {
+              display: none;
+
+              @media #{$text-small} {
+                display: unset;
+                margin-right: .67em;
+              }
+            }
+
+            text-align: left;
+
+            @media #{$text-small} {
+              margin: 0;
+              text-align: center;
+            }
+          }
+
+          p {
+            @media #{$text-small} {
+              display: none;
+            }
           }
         }
       }

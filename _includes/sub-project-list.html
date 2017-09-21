@@ -7,9 +7,9 @@
           {% if project.thumbnail %}
           <a href="{{ site.url }}{{ project.url }}"><img style="{{ project.thumbnailCustomCSS }}" src="{{ site.url }}/assets/img/projects/thumbnails/{{ project.thumbnail }}"></a>          {% endif %}
         </div>
-        <div class="item">
+        <div class="item description">
           <a href="{{ site.url }}{{ project.url }}">
-            <h2>{{ project.title }}</h2>
+            <h3><i class="fa fa-hand-pointer-o"></i>{{ project.title }}</h3>
             <p>{{ project.excerpt }}</p>
           </a>
         </div>
