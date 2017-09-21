@@ -15,7 +15,7 @@ nav {
   transition: all .25s ease;
 
   &.shrink {
-    height: 40px;
+    height: $nav-shrink-height;
 
     & > .logo-container {
       & > .logo {
@@ -29,7 +29,7 @@ nav {
     }
 
     & > .fluid-menu-container {
-      top: 40px;
+      top: $nav-shrink-height;
     }
   }
 

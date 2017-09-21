@@ -11,7 +11,7 @@ footer {
   z-index: 1;
 
   @media #{$small} {
-    height: 40px;
+    height: $footer-small-height;
   }
 
   .social-btn {

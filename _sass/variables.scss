@@ -29,9 +29,15 @@ $comp-color: complement(#222);
 // Navbar
 $nav-link-hover-transition: 0.15s;
 $nav-height: 70px;
+$nav-shrink-height: 40px;
+$uhd-nav-height: 100px;
+$uhd-nav-shrink-height: 60px;
 
 // Footer
 $footer-height: 50px;
+$footer-small-height: 40px;
+$uhd-footer-height: 70px;
+$uhd-footer-small-height: 50px;
 
 //button colors
 $success: #5cb85c;
@@ -44,17 +50,26 @@ $primary-font: Fira Sans, sans-serif;
 $code-font: Inconsolata;
 $alt-font: serif;
 $doc-font-size: 16;
+$uhd-font-size: 20;
 $doc-line-height: 26;
 
-// Media Queries
-// 960px- for base font 16px
+/*** Media Queries ***/
+// All calculations made for base font 16px
+/** Generic **/
+// 960px-
 $small: "only screen and (max-width: 60em)";
 
-// Between 961px and 1920px for base font 16px
+// Between 961px and 1920px
 $medium: "only screen and (min-width: 60.1em) and (max-width: 120em)";
 
-// 1921px+ for base font 16px
+// 1921px+
 $large: "only screen and (min-width: 120.1em)";
+
+/** For Body **/
+// 704px-
+$text-small: "only screen and (max-width: 44em)";
+
+/*** END Media Queries ***/
 
 //sizes
 $border-radius: 3px;
