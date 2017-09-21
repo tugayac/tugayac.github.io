@@ -64,10 +64,19 @@ $(window).scroll(function () {
 });
 
 $(window).resize(function () {
-  $nav.removeClass('menu-open');
-  if ($navMenuItems.css('display') !== 'none') {
-    $navMenuItems.css('display', '');
+  if ($menuIcon.css('display') === 'none') {
+    $nav.removeClass('menu-open');
+
+    if ($navMenuItems.css('display') === 'none') {
+      $navMenuItems.css('display', '');
+    }
+  } else {
+    if ($navMenuItems.css('display') !== 'none') {
+      $navMenuItems.css('display', 'none');
+      $nav.removeClass('menu-open');
+    }
+
+    $barsIcon.css('display', '');
+    $timesIcon.css('display', 'none');
   }
-  $barsIcon.css('display', '');
-  $timesIcon.css('display', 'none');
 });
