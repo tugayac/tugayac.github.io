@@ -5,12 +5,16 @@
     margin: 0;
   }
 
-  & > .col-3.back-button {
+  & > .back-button {
     display: flex;
     align-items: center;
   }
 
   a {
+    @media #{$small} {
+      display: none;
+    }
+
     & > i {
       vertical-align: middle;
     }
@@ -22,13 +26,23 @@
 }
 
 .content {
-  .tech-tag {
-    display: inline;
-    background-color: $secondary-text-color;
-    color: #fff;
-    font-size: 0.9em;
-    padding: 5px;
-    border-radius: $border-radius;
-    opacity: 0.5;
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tech-tag {
+      background-color: $secondary-text-color;
+      color: #fff;
+      font-size: 0.9em;
+      padding: 0 5px;
+      margin: 3px;
+      border-radius: $border-radius;
+      opacity: 0.5;
+
+      @media #{$text-small} {
+        flex: 1 0 auto;
+        text-align: center;
+      }
+    }
   }
 }

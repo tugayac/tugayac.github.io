@@ -62,7 +62,7 @@ Since this project was initially intended to be sold to customers (with the sync
 Nagios is an industry standard for monitoring systems and networks. It offers [thousands of open source plugins](https://exchange.nagios.org/) for use with various monitoring tasks. A few drawbacks of Nagios are high barrier to entry (as it doesn't have a clear client-server architecture like Sensu does) and a dated web UI . Since Sensu is decentralized, configuring it is relatively easier: Sensu clients only need one server to connect to, which they are then redirected to other servers if needed. **In addition, Sensu supports the usage of Nagios plugins**.
 
 <figure class="half">
-  <a href="https://wiki-ext.aps.anl.gov/epics/images/a/ae/NagiosServicesDetail.jpg"><img src="https://wiki-ext.aps.anl.gov/epics/images/a/ae/NagiosServicesDetail.jpg"></a>
+  <a href="https://jira.hyperic.com/secure/attachment/22306/Screenshot-1.jpg"><img src="https://jira.hyperic.com/secure/attachment/22306/Screenshot-1.jpg"></a>
   <a href="https://www.nagios.com/wp-content/uploads/2016/02/Modern_Web_Interface_Drop_5.jpg"><img src="https://www.nagios.com/wp-content/uploads/2016/02/Modern_Web_Interface_Drop_5.jpg"></a>
   <center><figcaption>The left side shows the old Nagios interface, while the right side shows the new Nagios interface (not available at the time of development of this project)</figcaption></center>
 </figure>

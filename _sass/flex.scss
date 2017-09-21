@@ -1,7 +1,19 @@
 .flex-header {
   display: flex;
-}
 
-.col-3 {
-  width: 33.3%;
+  .back-button, .info {
+    flex: 0 1 30%;
+
+    @media #{$small} {
+      flex: none;
+    }
+  }
+
+  .title {
+    flex: 1 0 40%;
+
+    @media #{$small} {
+      flex: 0 1 100%;
+    }
+  }
 }
