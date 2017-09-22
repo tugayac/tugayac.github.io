@@ -1,0 +1,113 @@
+.project-content {
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .project-list {
+    text-align: left;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding: 0 18px;
+      margin: 0 10px;
+      text-decoration: none;
+      background: $white;
+
+      .flex {
+        display: flex;
+        align-items: center;
+
+        @media #{$text-small} {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          img {
+            @include default-box-shadow(0.5);
+          }
+
+          a {
+            color: $active-element-color !important;
+          }
+        }
+
+        .item {
+          flex: 1 1 20%;
+
+          @media #{$text-small} {
+            flex: 1 1 auto;
+          }
+
+          &.image {
+            max-width: 30%;
+
+            @media #{$text-small} {
+              max-width: 80%;
+            }
+
+            a {
+              @include flex-container(center, center);
+
+              padding: 20px;
+
+              img {
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+                border-radius: $border-radius;
+                max-height: 200px;
+                transition: box-shadow .25s ease-in-out;
+
+                &[src$='.svg'] {
+                  max-width: 250px;
+                }
+              }
+            }
+          }
+
+          &.description {
+            & > a {
+              text-decoration: none;
+              color: $text-color;
+              font-weight: bolder;
+
+              h3 {
+                i {
+                  display: none;
+
+                  @media #{$text-small} {
+                    display: unset;
+                    margin-right: .67em;
+                  }
+                }
+
+                text-align: left;
+
+                @media #{$text-small} {
+                  margin: 0;
+                  text-align: center;
+                }
+              }
+
+              p {
+                font-weight: lighter;
+
+                @include font-rem(16);
+
+                @media #{$text-small} {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

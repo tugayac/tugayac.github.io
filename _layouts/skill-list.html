@@ -64,6 +64,8 @@
   {% for skill in skills %}
   <div class="skill-details-modal modal" data-skill-title="{{ skill.title }}">
     <div class="modal-content">
+      <span class="close">&times;</span>
+      <!-- ./close -->
       {% if skill.lastUsed %}
       <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
       {% endif %}
@@ -83,7 +85,8 @@
 
   <!-- Scripts -->
   {% include scripts.html %}
-  <script src="{{ site.url }}/assets/js/custom/skill-list.js"></script>
+  <!-- Custom Scripts -->
+  {% javascript custom/skill-list.js %}
 </body>
 
 </html>

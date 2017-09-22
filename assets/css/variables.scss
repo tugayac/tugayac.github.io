@@ -1,30 +1,18 @@
 // Colors
+$white: #fff;
+$black: #000;
+$gray: #eee;
+$medium-gray: #ACACAC;
+
 $text-color: #000;
 $secondary-text-color: #333;
 $active-element-color: #006eff;
 $active-element-hover-color: #5BBA6F;
-$nav-link-hover: #eee;
 
-$bodycolor: #D24D57;
-$black: #000;
-$white: #fff;
-$color_gray: #e8e8e8;
-$red: #FF4136;
-$maroon: #85144b;
-$color_tuatara: #383838;
-$color_shark: #282828;
-$color_mischka: #d0d1d5;
-$color_mercury: #e5e6e9;
-$color_bon_jour: #dfe0e4;
-$color_gallery: #f0f0f0;
-$color_stack: #ACACAC;
-$color_alabaster: #f9f9f9;
-$color_tundora: #444;
-$color_fuscous_gray: #555;
-$color_alabaster: #fcfcfc;
-$color_celeste: #ccc;
-$color_pink_swan: #bbb;
-$comp-color: complement(#222);
+$nav-link-hover: $gray;
+$inline-code-border-color: #d0d1d5;
+$figcaption-color: #999;
+$blockquote-color: #444;
 
 // Navbar
 $nav-link-hover-transition: 0.15s;
@@ -37,12 +25,6 @@ $uhd-nav-shrink-height: 60px;
 $footer-height: 50px;
 $footer-small-height: 40px;
 $uhd-footer-height: 70px;
-
-//button colors
-$success: #5cb85c;
-$warning: #dd8338;
-$danger: #C64537;
-$info: #308cbc;
 
 //fonts
 $primary-font: Fira Sans, sans-serif;
@@ -73,8 +55,3 @@ $text-small: "only screen and (max-width: 44em)";
 
 //sizes
 $border-radius: 3px;
-
-// Button
-$button-border-radius: 5px;
-$box-shadow-blur-radius: $button-border-radius;
-$box-shadow-y-offset: 1px;

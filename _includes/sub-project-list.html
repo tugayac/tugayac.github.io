@@ -1,7 +1,7 @@
-<div class="post-list">
+<div class="project-list">
   {% for project in site.projects %} {% if (project.type == include.projectType) and (project.hide == false) %}
   <ul>
-    <li class="post-summary">
+    <li>
       <div class="flex">
         <div class="item image">
           {% if project.thumbnail %}
@@ -15,7 +15,7 @@
         </div>
       </div>
     </li>
-    <hr class="hr-line">
+    <hr>
   </ul>
   {% endif %} {% endfor %}
 </div>

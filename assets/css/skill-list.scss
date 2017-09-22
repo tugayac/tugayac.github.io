@@ -7,17 +7,16 @@ $signal-base-height: 12px;
       width: $width;
     }
 
-    display: flex;
-    flex: $flex;
-
     @if $border {
-      border: solid 1px $color_stack;
+      border: solid 1px $medium-gray;
       border-radius: $border-radius;
-      border-color: rgba($color_stack, 0.4) rgba($color_stack, 0.4) $color_stack;
+      border-color: rgba($medium-gray, 0.4) rgba($medium-gray, 0.4) $medium-gray;
     }
 
-    justify-content: center;
-    align-items: center;
+    flex: $flex;
+
+    @include flex-container(center, center);
+
     padding: 10px;
     margin: 5px;
     margin-bottom: 10px;
@@ -55,7 +54,7 @@ $signal-base-height: 12px;
 
       & > .signal-bar {
         width: $signal-base-width;
-        background-color: $color_mischka;
+        background-color: #dfdfdf;
         border-radius: $border-radius;
         display: inline-block;
 

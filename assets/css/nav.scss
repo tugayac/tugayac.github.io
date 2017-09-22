@@ -14,7 +14,7 @@ nav {
 
   z-index: 1;
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   border-bottom: 1px solid $text-color;
   display: flex;
   transition: all .25s ease;
@@ -56,7 +56,6 @@ nav {
     align-items: center;
 
     @media #{$small} {
-      padding-left: 20px;
       flex: 0 0 50%;
     }
 
@@ -80,16 +79,15 @@ nav {
       padding-left: 0.67em;
 
       @media #{$small} {
-        padding: 0;
+        padding: 0 0 0 20px;
       }
     }
   }
 
   & > .fluid-menu-container {
-    display: flex;
     flex: 0 0 50%;
-    justify-content: center;
-    align-items: stretch;
+
+    @include flex-container(center, stretch);
 
     @media #{$small} {
       // jQuery will add "flex"
@@ -104,26 +102,24 @@ nav {
       width: 100%;
       line-height: initial;
       border-bottom: solid 1px $text-color;
-      background-color: #fff;
+      background-color: $white;
     }
 
     & > div {
-      display: flex;
       flex: 0 0 8em;
-      justify-content: center;
-      align-items: stretch;
+
+      @include flex-container(center, stretch);
 
       @media #{$small} {
-        flex: 0 0 70px;
+        flex: 0 0 4.35em;
       }
 
       & > a {
+        @include flex-container(center, center);
+
         padding: 0 25px;
         flex: 0 0 100%;
         color: $text-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-size: 1.1em;
 
         @media #{$small} {
@@ -157,11 +153,10 @@ nav {
     display: none;
 
     @media #{$small} {
-      display: flex;
-      padding-right: 10px;
       flex: 0 0 50%;
-      align-items: center;
-      justify-content: flex-end;
+      padding-right: 10px;
+
+      @include flex-container(flex-end, center);
     }
 
     & > a {

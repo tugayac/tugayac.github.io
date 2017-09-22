@@ -1,0 +1,106 @@
+hr {
+  border: 0;
+  height: 1px;
+  opacity: .25;
+  margin: 1em 0;
+  background-image: linear-gradient(to right, $white, $secondary-text-color, $white);
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+figure {
+  @include flex-container(center, center);
+
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  img {
+    &[src$='.svg'] {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  &.half {
+    a {
+      @include flex-container(center, center);
+
+      flex: 1 1 50%;
+
+      @media #{$small} {
+        flex: 1 1 auto;
+      }
+
+      & > img {
+        @media #{$small} {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  &.third {
+    a {
+      @include flex-container(center, center);
+
+      flex: 1 1 33.3%;
+
+      @media #{$small} {
+        flex: 1 1 auto;
+      }
+
+      & > img {
+        @media #{$small} {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  & > center {
+    flex: 0 0 100%;
+  }
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// go up button
+.goup-container {
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.goup-arrow {
+  border-color: transparent transparent $secondary-text-color !important;
+
+  &:hover {
+    border-color: transparent transparent $active-element-color !important;
+  }
+}
+
+// reading time
+.reading-time {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+a.btn {
+  color: $active-element-color;
+  transition: color .15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $active-element-hover-color !important;
+  }
+}

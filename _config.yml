@@ -19,7 +19,6 @@ collections:
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown
-highlighter:        rouge
 kramdown:
   auto_ids:         true
   footnote_nr:      1
@@ -27,9 +26,27 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+# sass:
+#   sass_dir:         _sass
+#   style:            compressed
+
+assets:
+  # compress: # Compresses for production by default
+  #   css: true
+  #   js: true
+  sources:
+    - "assets/js"
+    - "assets/css"
+    - "assets/fonts"
+    - "assets/img"
+  autoprefixer:
+    browsers:
+      - "iOS >= 10"
+      - "last 3 Edge versions"
+      - "last 5 Chrome versions"
+      - "last 5 ChromeAndroid versions"
+      - "last 5 Firefox versions"
+      - "Safari >= 10"
 
 # Comments
 disqus_shortname:   ardactugay
@@ -55,11 +72,12 @@ linkedin:          arda-tugay-09b22861
 #codepen:           username
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-assets
 
 jekyll-mentions:
     base_url: https://github.com

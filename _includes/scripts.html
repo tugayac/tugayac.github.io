@@ -1,11 +1,13 @@
 <!-- JS -->
-<script src="{{ site.url }}/assets/js/custom/watch-hover.js"></script>
+{% javascript custom/watch-hover.js %}
 <script src="{{ site.url }}/assets/js/jquery-1.12.0.min.js"></script>
 <script src="{{ site.url }}/assets/js/jquery.goup.min.js"></script>
 <script src="{{ site.url }}/assets/js/jquery.magnific-popup.min.js"></script>
 <script src="{{ site.url }}/assets/js/jquery.fitvid.min.js"></script>
-<script src="{{ site.url }}/assets/js/scripts.js"></script>
-<script src="{{ site.url }}/assets/js/custom/nav.js"></script>
+{% javascript scripts.js %}
+<!-- Nav -->
+{% javascript custom/nav.js %}
+<!-- Google Analytics -->
 {% if site.google.analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>

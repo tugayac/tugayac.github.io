@@ -1,13 +1,12 @@
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  @include flex-container(center, stretch);
+
   border-top: 1px solid $text-color;
   position: fixed;
   bottom: 0;
   height: $footer-height;
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   z-index: 1;
 
   @media #{$small} {

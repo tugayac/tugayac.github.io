@@ -1,0 +1,150 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: $primary-font;
+
+  @include font-rem($doc-font-size);
+
+  @media #{$text-small} {
+    @include font-rem($small-font-size);
+  }
+
+  @media #{$large} {
+    @include font-rem($uhd-font-size);
+  }
+}
+
+@mixin container-base($width) {
+  width: $width;
+  margin: 0 auto;
+  margin-top: $nav-height;
+  margin-bottom: $footer-height;
+  color: $text-color;
+
+  @media #{$large} {
+    width: $width + 16;
+    margin-top: $uhd-nav-height;
+  }
+
+  max-width: 100%;
+  transition: 0.5s;
+
+  @media #{$small} {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .about-article {
+    padding: 15px 0;
+
+    @media #{$text-small} {
+      padding: 0;
+    }
+
+    img.profile-pic {
+      float: left;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-right: 25px;
+      object-fit: cover;
+
+      @media #{$text-small} {
+        float: none;
+        margin: 0 auto;
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    & > .text {
+      text-align: justify;
+    }
+
+    & > .large-text {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+
+    & > .medium-text {
+      font-size: 1.15em;
+      line-height: 1.5em;
+    }
+
+    & > .small-text {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    a {
+      color: $active-element-color !important;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color .15s ease-in-out;
+
+      &:hover {
+        color: $active-element-hover-color;
+      }
+    }
+  }
+}
+
+.container {
+  @include container-base(40rem);
+}
+
+.container-medium {
+  @include container-base(56rem);
+}
+
+.container-wide {
+  @include container-base(72rem);
+}
+
+nav.shrink + div.container {
+  margin-top: $nav-shrink-height;
+}
+
+.goup-container {
+  z-index: 2;
+}
+
+footer ~ div.goup-container {
+  bottom: 60px !important;
+}
+
+#disqus_thread {
+  padding: 2em;
+  transition: 0.5s;
+
+  @media #{$small} {
+    padding: 2em 0;
+  }
+}
+
+.social-share {
+  display: block;
+  margin-top: 1rem;
+  width: 30%;
+  float: right;
+  text-align: right;
+}
+
+html.can-touch {
+  a:hover {
+    color: $text-color;
+  }
+
+  .about-article a:hover {
+    color: $active-element-color;
+  }
+}
