@@ -1,13 +1,3 @@
-.flex-header {
-  & > .col-3.info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  a {}
-}
-
 $signal-base-width: 10px;
 $signal-base-height: 12px;
 
@@ -146,50 +136,31 @@ $signal-base-height: 12px;
   }
 }
 
-.modal {
-  display: none;
-
-  // Hidden by default
-  position: fixed;
-  z-index: 1;
-
-  // Always on top when shown
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.75);
-
-  & > .modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid $color_stack;
-    border-radius: $border-radius;
-    width: 30%;
-    text-align: right;
-
-    & > p, li, h3 {
-      text-align: left;
+.skill-list .flex-header {
+  & > .info {
+    @media #{$text-small} {
+      align-content: flex-end;
     }
 
-    & > a.btn.done {
-      font-weight: 700;
-    }
-
-    & > .close {
-      font-weight: bold;
-      float: right;
-      color: rgba($secondary-text-color, 0.5);
-      font-size: 32px;
-      transition: color .15s ease-in-out;
-
-      &:hover {
-        color: $active-element-color;
-        text-decoration: none;
-        cursor: pointer;
+    & > a.btn {
+      @media #{$small} {
+        display: none;
       }
+
+      &.small {
+        display: none;
+
+        @media #{$small} {
+          display: unset;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  & > .back-button, & > .info {
+    @media #{$small} {
+      flex: 0 1 40%;
     }
   }
 }

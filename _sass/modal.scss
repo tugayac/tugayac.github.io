@@ -1,0 +1,52 @@
+.modal {
+  display: none;
+
+  // Hidden by default
+  position: fixed;
+  z-index: 1;
+
+  // Always on top when shown
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  & > .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: $border-radius;
+    width: 56em;
+    max-width: 95%;
+    text-align: right;
+
+    @media #{$small} {
+      font-size: 1.25em;
+      line-height: 1.5em;
+    }
+
+    & > p, li, h3 {
+      text-align: left;
+    }
+
+    & > a.btn.done {
+      font-weight: 700;
+    }
+
+    & > .close {
+      font-weight: bold;
+      float: right;
+      color: rgba($secondary-text-color, 0.5);
+      font-size: 32px;
+      transition: color .15s ease-in-out;
+
+      &:hover {
+        color: $active-element-color;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

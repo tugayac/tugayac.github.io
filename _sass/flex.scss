@@ -1,15 +1,17 @@
 .flex-header {
   display: flex;
 
-  .back-button, .info {
+  & > .back-button, & > .info {
     flex: 0 1 30%;
-
-    @media #{$small} {
-      flex: none;
-    }
   }
 
-  .title {
+  & > .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  & > .title {
     flex: 1 0 40%;
 
     @media #{$small} {

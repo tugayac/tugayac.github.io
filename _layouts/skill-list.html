@@ -11,134 +11,59 @@
   <!-- Nav -->
   {% include nav.html %}
   <!-- Header -->
-  <header class="header" role="banner">
-    <div class="container-medium animated fadeIn">
-      <div class="content">
-        <div class="flex-header">
-          <div class="col-3"></div>
-          <div class="col-3 post-title">
-            <h1>{{ page.title }}</h1>
-          </div>
-          <div class="col-3 info">
-            <a class="btn">What do the skill levels mean?</a>
-          </div>
+  <div class="container-medium animated fadeIn skill-list">
+    <div class="content">
+      <div class="flex-header">
+        <div class="back-button"></div>
+        <div class="title">
+          <h1>{{ page.title }}</h1>
         </div>
-        <div id="tags">
-          <h2>Filter</h2>
-          <div class="tag-buttons">
-            <a class="btn" data-tag-name="data-science">Data Science</a>
-            <a class="btn" data-tag-name="databases">Databases</a>
-            <a class="btn" data-tag-name="ios">iOS</a>
-            <a class="btn" data-tag-name="networking">Networking</a>
-            <a class="btn" data-tag-name="server">Server</a>
-            <a class="btn" data-tag-name="web-dev">Web Dev</a>
-          </div>
-        </div>
-        <div id="programming-language-list">
-          <h2 style="text-align: center">Programming Languages</h2>
-          {% include skill-container.html skillCategory="programming-language" %}
-        </div>
-        <div id="framework-library-list">
-          <h2 style="text-align: center">Frameworks and Libraries</h2>
-          {% include skill-container.html skillCategory="framework-library" %}
-        </div>
-        <div id="runtime-database-list">
-          <h2 style="text-align: center">Runtime Environment and Databases</h2>
-          {% include skill-container.html skillCategory="runtime-database" %}
-        </div>
-        <div id="tools-list">
-          <h2 style="text-align: center">Tools</h2>
-          {% include skill-container.html skillCategory="tool" %}
-        </div>
-        <div id="other-software-list">
-          <h2 style="text-align: center">Other Software</h2>
-          {% include skill-container.html skillCategory="other-software" %}
+        <div class="info">
+          <a class="btn">What do the skill levels mean?</a>
+          <a class="btn small">Skill Levels</a>
         </div>
       </div>
-    </div>
-  </header>
-
-  <div id="skill-level-info-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>What do the skill levels mean?</h3>
-
-      <div class="flex-container-column">
-        <div class="description-container">
-          <p>Indicates I have either dabbled with the technology (nothing more than experimentation for a few days/weeks) or
-            have used it a long time ago.</p>
-        </div>
-        <div class="skill-container">
-          <div class="skill-title">
-            <h3>Novice</h3>
-          </div>
-          <div class="skill-level">
-            <div class="signal-bar beginner active"></div>
-            <div class="signal-bar intermediate"></div>
-            <div class="signal-bar advanced"></div>
-            <div class="signal-bar master"></div>
-          </div>
-        </div>
-        <div class="description-container">
-          <hr>
-          <p>Indicates I have used the technology in a project before, but I will require access to documentation, examples,
-            and some time to master it.</p>
-        </div>
-        <div class="skill-container">
-          <div class="skill-title">
-            <h3>Intermediate</h3>
-          </div>
-          <div class="skill-level">
-            <div class="signal-bar beginner active"></div>
-            <div class="signal-bar intermediate active"></div>
-            <div class="signal-bar advanced"></div>
-            <div class="signal-bar master"></div>
-          </div>
-        </div>
-        <div class="description-container">
-          <hr>
-          <p>Indicates I have used the technology in a project before and can confidently work with it without constant access
-            to documentation, examples, and help.</p>
-        </div>
-        <div class="skill-container">
-          <div class="skill-title">
-            <h3>Advanced</h3>
-          </div>
-          <div class="skill-level">
-            <div class="signal-bar beginner active"></div>
-            <div class="signal-bar intermediate active"></div>
-            <div class="signal-bar advanced active"></div>
-            <div class="signal-bar master"></div>
-          </div>
-        </div>
-        <div class="description-container">
-          <hr>
-          <p>Indicates I have used the technology in a project before and can confidently work with it without access to examples
-            and help. However, I still need access to documentation (or source code) to effectively use it, as I do not memorize
-            this information.</p>
-        </div>
-        <div class="skill-container">
-          <div class="skill-title">
-            <h3>Master</h3>
-          </div>
-          <div class="skill-level">
-            <div class="signal-bar beginner active"></div>
-            <div class="signal-bar intermediate active"></div>
-            <div class="signal-bar advanced active"></div>
-            <div class="signal-bar master active"></div>
-          </div>
+      <div id="tags">
+        <h2>Filter</h2>
+        <div class="tag-buttons">
+          <a class="btn" data-tag-name="data-science">Data Science</a>
+          <a class="btn" data-tag-name="databases">Databases</a>
+          <a class="btn" data-tag-name="ios">iOS</a>
+          <a class="btn" data-tag-name="networking">Networking</a>
+          <a class="btn" data-tag-name="server">Server</a>
+          <a class="btn" data-tag-name="web-dev">Web Dev</a>
         </div>
       </div>
-
-      <a class="btn done">Done</a>
+      <div id="programming-language-list">
+        <h2 style="text-align: center">Programming Languages</h2>
+        {% include skill-container.html skillCategory="programming-language" %}
+      </div>
+      <div id="framework-library-list">
+        <h2 style="text-align: center">Frameworks and Libraries</h2>
+        {% include skill-container.html skillCategory="framework-library" %}
+      </div>
+      <div id="runtime-database-list">
+        <h2 style="text-align: center">Runtime Environment and Databases</h2>
+        {% include skill-container.html skillCategory="runtime-database" %}
+      </div>
+      <div id="tools-list">
+        <h2 style="text-align: center">Tools</h2>
+        {% include skill-container.html skillCategory="tool" %}
+      </div>
+      <div id="other-software-list">
+        <h2 style="text-align: center">Other Software</h2>
+        {% include skill-container.html skillCategory="other-software" %}
+      </div>
     </div>
   </div>
+
+  <!-- modal -->
+  {% include skill-level-info-modal.html %}
+  <!-- ./modal -->
 
   {% for skill in skills %}
   <div class="skill-details-modal modal" data-skill-title="{{ skill.title }}">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <!-- divider -->
       {% if skill.lastUsed %}
       <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
       {% endif %}

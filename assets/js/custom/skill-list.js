@@ -82,7 +82,7 @@ $skillContainers.on('click', function (event) {
 
 /*** Skill Level Info Modal ***/
 var $skillLevelInfoModal = $('#skill-level-info-modal');
-var $skillLevelInfoModalButton = $('.col-3.info > .btn');
+var $skillLevelInfoModalButton = $('.info > .btn');
 $skillLevelInfoModal.on('click', function (event) {
   if (event.target.id === 'skill-level-info-modal') {
     $skillLevelInfoModal.css('display', 'none');
