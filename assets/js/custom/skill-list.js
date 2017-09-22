@@ -57,26 +57,44 @@ tagButtons.each(function () {
 /*** END Tag Filtering ***/
 
 /*** Skill Details Modal ***/
+var $currentlyOpenModal;
+var closeModal = function ($modal) {
+  $modal.fadeOut({
+    duration: 400,
+    complete: function () {
+      $modal.css('display', 'none');
+      document.body.style.overflow = 'initial';
+
+      $currentlyOpenModal = undefined;
+    }
+  });
+};
+
 var $skillDetailsModal = $('.skill-details-modal');
 $skillDetailsModal.on('click', function (event) {
   if ($(event.target).hasClass('skill-details-modal')) {
-    $skillDetailsModal.css('display', 'none');
-    document.body.style.overflow = 'initial';
+    closeModal($currentlyOpenModal);
   }
 });
 $skillDetailsModal.find('.close').on('click', function (event) {
-  $skillDetailsModal.css('display', 'none');
-  document.body.style.overflow = 'initial';
+  closeModal($currentlyOpenModal);
 });
-$skillDetailsModal.find('.btn').on('click', function (event) {
-  $skillDetailsModal.css('display', 'none');
-  document.body.style.overflow = 'initial';
+$skillDetailsModal.find('.btn.done').on('click', function (event) {
+  closeModal($currentlyOpenModal);
 });
 
 $skillContainers.on('click', function (event) {
   var $relatedModal = $('div.skill-details-modal[data-skill-title="' + event.currentTarget.dataset.skillTitle + '"]');
   document.body.style.overflow = 'hidden';
-  $relatedModal.css('display', 'block');
+  $relatedModal.fadeIn({
+    duration: 400,
+    start: function () {
+      $relatedModal.css('display', 'block');
+    },
+    complete: function () {
+      $currentlyOpenModal = $relatedModal;
+    }
+  });
 });
 /*** END Skill Details Modal ***/
 
@@ -85,21 +103,23 @@ var $skillLevelInfoModal = $('#skill-level-info-modal');
 var $skillLevelInfoModalButton = $('.info > .btn');
 $skillLevelInfoModal.on('click', function (event) {
   if (event.target.id === 'skill-level-info-modal') {
-    $skillLevelInfoModal.css('display', 'none');
-    document.body.style.overflow = 'initial';
+    closeModal($skillLevelInfoModal);
   }
 });
 $skillLevelInfoModal.find('.close').on('click', function (event) {
-  $skillLevelInfoModal.css('display', 'none');
-  document.body.style.overflow = 'initial';
+  closeModal($skillLevelInfoModal);
 });
-$skillLevelInfoModal.find('.btn').on('click', function (event) {
-  $skillLevelInfoModal.css('display', 'none');
-  document.body.style.overflow = 'initial';
+$skillLevelInfoModal.find('.btn.done').on('click', function (event) {
+  closeModal($skillLevelInfoModal);
 });
 
 $skillLevelInfoModalButton.on('click', function () {
   document.body.style.overflow = 'hidden';
-  $skillLevelInfoModal.css('display', 'block');
+  $skillLevelInfoModal.fadeIn({
+    duration: 400,
+    start: function () {
+      $skillLevelInfoModal.css('display', 'block');
+    }
+  });
 });
 /*** END Skill Level Info Modal ***/
