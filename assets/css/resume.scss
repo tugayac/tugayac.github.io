@@ -1,4 +1,8 @@
 .container-wide.resume {
   height: calc(100% - #{$nav-height});
   margin-bottom: 0;
+
+  @media #{$large} {
+    height: calc(100% - #{$uhd-nav-height});
+  }
 }
