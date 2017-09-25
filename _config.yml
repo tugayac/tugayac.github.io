@@ -1,7 +1,7 @@
 # Site
 title:              "Arda C. Tugay"
 bio:                "Software Engineer"
-description:        "Moon is a minimal, one column jekyll theme for your blog."
+#description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -14,6 +14,8 @@ collections:
     output: true
     permalink: /projects/:title/
   skills:
+    output: false
+  resume:
     output: false
 
 # Jekyll
@@ -39,6 +41,7 @@ assets:
     - "assets/css"
     - "assets/fonts"
     - "assets/img"
+    - "assets/docs"
   autoprefixer:
     browsers:
       - "iOS >= 10"
