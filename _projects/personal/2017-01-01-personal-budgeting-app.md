@@ -34,9 +34,9 @@ For the past year, I've tried out several budgeting applications, including Mint
 None of the applications I mentioned above contained any of these features.
 
 <figure class="third">
-  <a href="https://cdn6.ijstatic.com/wp-content/uploads/2016/12/countabout-transaction.png"><img src="https://cdn6.ijstatic.com/wp-content/uploads/2016/12/countabout-transaction.png"></a>
-  <a href="https://cdn3.ijstatic.com/wp-content/uploads/2017/06/personal-capital-dashboard.png"><img src="https://cdn3.ijstatic.com/wp-content/uploads/2017/06/personal-capital-dashboard.png"></a>
-  <a href="https://www3.pcmag.com/media/images/483160-mint-com.png"><img src="https://www3.pcmag.com/media/images/483160-mint-com.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/budgeting-app/countabout.png"><img src="{{ site.url }}/assets/img/projects/budgeting-app/countabout.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/budgeting-app/personal-capital.png"><img src="{{ site.url }}/assets/img/projects/budgeting-app/personal-capital.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/budgeting-app/mint-com.png"><img src="{{ site.url }}/assets/img/projects/budgeting-app/mint-com.png"></a>
   <center><figcaption>Screenshots from CountAbout (left), Personal Capital (middle), and Mint.com (right).</figcaption></center>
 </figure>
 
@@ -50,7 +50,7 @@ Most people I know have used Mint at least once in their lifetime. It's the one 
 Mint is a free to use application. In most cases like this "the user is the product" and I am not fond of my financial information being sold for profit.
 
 <figure>
-  <a href="https://cdn5.ijstatic.com/wp-content/uploads/2017/08/mint-com-transactions.png"><img src="https://cdn5.ijstatic.com/wp-content/uploads/2017/08/mint-com-transactions.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/budgeting-app/mint-com-transactions.png"><img src="{{ site.url }}/assets/img/projects/budgeting-app/mint-com-transactions.png"></a>
   <center><figcaption>Mint.com offers very few filtering capabilities for searching through transactions.</figcaption></center>
 </figure>
 
@@ -63,7 +63,7 @@ I am less concerned with Personal Capital selling my financial information, as t
 CountAbout is a paid budgeting application, that I feel has less features than Mint. It can automatically download banking information; however, the interface is not well polished and difficult to use.
 
 <figure>
-  <a href="https://cdn6.ijstatic.com/wp-content/uploads/2016/12/countabout-transaction.png"><img src="https://cdn6.ijstatic.com/wp-content/uploads/2016/12/countabout-transaction.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/budgeting-app/countabout-transactions.png"><img src="{{ site.url }}/assets/img/projects/budgeting-app/countabout-transactions.png"></a>
   <center><figcaption>Looking at the same screenshot from CountAbout above, the interface is cluttered and contains too many options and fields.</figcaption></center>
 </figure>
 

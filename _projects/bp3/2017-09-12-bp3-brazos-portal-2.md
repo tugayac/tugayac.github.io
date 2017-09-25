@@ -40,7 +40,7 @@ I worked on Brazos Portal in 2016 and 2017, from product inception to its first 
 Since [IBM unofficially supported the use of ElasticSearch](https://developer.ibm.com/bpm/2017/03/new-technology-demonstration-bpm-analytics/) by other applications, there was not much documentation in this area. This made using the IBM BPM provided ElasticSearch challenging, as we had to experiment with the ElasticSearch indices and documents inserted by IBM BPM to understand how we can get the task information needed.
 
 <figure>
-  <a href="https://developer.ibm.com/bpm/wp-content/uploads/sites/31/2017/03/OI_3.png"><img src="https://developer.ibm.com/bpm/wp-content/uploads/sites/31/2017/03/OI_3.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/brazos-portal-2/jms-queue.png"><img src="{{ site.url }}/assets/img/projects/brazos-portal-2/jms-queue.png"></a>
   <center><figcaption><a href="https://developer.ibm.com/bpm/2017/03/new-technology-demonstration-bpm-analytics/">The JMS queue emits events, which are then recorded to ElasticSearch.</a></figcaption></center>
 </figure>
 
@@ -65,7 +65,7 @@ We used to use Gulp with various plugins as our build tool for web projects; how
 In addition to Webpack's mentioned benefits, it provided great tools to analyze the sizes of included chunks (such as third-party libraries), allowing us to cut out duplicates and unused portions of libraries.
 
 <figure>
-  <a href="https://cloud.githubusercontent.com/assets/302213/20628702/93f72404-b338-11e6-92d4-9a365550a701.gif"><img src="https://cloud.githubusercontent.com/assets/302213/20628702/93f72404-b338-11e6-92d4-9a365550a701.gif"></a>
+  <a href="{{ site.url }}/assets/img/projects/brazos-portal-2/webpack-bundle-analyzer.gif"><img src="{{ site.url }}/assets/img/projects/brazos-portal-2/webpack-bundle-analyzer.gif"></a>
   <center><figcaption><a href="https://github.com/th0r/webpack-bundle-analyzer">The Webpack Bundle Analyzer Plugin.</a></figcaption></center>
 </figure>
 

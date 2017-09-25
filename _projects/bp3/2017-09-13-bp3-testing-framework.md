@@ -24,9 +24,9 @@ technologiesUsed:
 After being approached by management to improve our testing capabilities for [Brazos UI](https://www.bp-3.com/products/brazos-user-experience-framework/), I proposed an automation framework as a potential solution, as tests for it were being run manually by the testing team. Working closely with the development and the testing team, I implemented a modular framework that could be used to write automation tests for any platform. Currently, it provides a framework for writing automation tests for the web, IBM BPM (which is what Brazos UI needs) and any other application that can be used with Java.
 
 <figure class="third">
-  <a href="http://selenide.org/images/selenide-logo-big.png"><img src="http://selenide.org/images/selenide-logo-big.png"></a>
-  <a href="http://www.seleniumhq.org/images/big-logo.png"><img src="http://www.seleniumhq.org/images/big-logo.png" width="150"></a>
-  <a href="https://cucumber.io/images/cucumber-logo.svg"><img src="https://cucumber.io/images/cucumber-logo.svg"></a>
+  <a href="{{ site.url }}/assets/img/projects/testing-framework/selenide-logo.png"><img src="{{ site.url }}/assets/img/projects/testing-framework/selenide-logo.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/testing-framework/selenium-logo.png"><img src="{{ site.url }}/assets/img/projects/testing-framework/selenium-logo.png" width="150"></a>
+  <a href="{{ site.url }}/assets/img/projects/testing-framework/cucumber-logo.svg"><img src="{{ site.url }}/assets/img/projects/testing-framework/cucumber-logo.svg"></a>
   <center><figcaption>Selenide, Selenium, and Cucumber work together to run behavioral UI tests.</figcaption></center>
 </figure>
 

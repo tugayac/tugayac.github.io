@@ -15,8 +15,10 @@
             {% include sub-project-list.html projectType="work" %}
             <h2>Personal Projects</h2>
             {% include sub-project-list.html projectType="personal" %}
-            <h3 style="text-align: center;">You can find more about my Open Source projects on my <a href="http://github.com/{{ site.github-url }}" target="_blank"
-                    rel="noopener noreferrer">GitHub</a> page.</h3>
+            <h4 style="text-align: center;">You can find more about my Open Source projects on my <a href="http://github.com/{{ site.github-url }}" target="_blank"
+                    rel="noopener noreferrer">GitHub</a> page.</h4>
+            <h2>Achievements</h2>
+            {% include sub-project-list.html projectType="achievement" %}
         </div>
     </div>
     {% include scripts.html %}

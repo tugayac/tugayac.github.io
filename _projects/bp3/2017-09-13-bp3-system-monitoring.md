@@ -24,7 +24,7 @@ technologiesUsed:
 This project was initially designed to help diagnose customers' BPM environment issues, as BP3's customers frequently had performance issues on their systems running IBM BPM. Although eventually only used internally to monitor BP3's internal BPM environments, it was designed to automatically open or update support tickets to notify support of issues with environments.
 
 <figure>
-  <a href="https://raw.githubusercontent.com/sensu/uchiwa/master/docs/uchiwa-ui.png"><img src="https://raw.githubusercontent.com/sensu/uchiwa/master/docs/uchiwa-ui.png"></a>
+  <a href="{{ site.url }}/assets/img/projects/system-monitoring/uchiwa-ui.png"><img src="{{ site.url }}/assets/img/projects/system-monitoring/uchiwa-ui.png"></a>
   <center><figcaption>The UI for this project looks similar to <a href="https://github.com/sensu/uchiwa">Uchiwa's</a>, which is the dashboard that comes with Sensu.</figcaption></center>
 </figure>
 
@@ -54,7 +54,7 @@ Since this project was initially intended to be sold to customers (with the sync
 [Sensu](https://github.com/sensu/sensu) is an open source monitoring tool for decentralized monitoring. Multiple clients and servers can be installed that allow clients to connect to any of the available servers for relaying their findings. Sensu also comes with a web UI, where users can monitor systems in real-time. Sensu servers can then be configured to forward their findings (in our case, via email) through a provided API.
 
 <figure>
-  <a href="https://sensuapp.org/docs/1.0/img/sensu-diagram.gif"><img src="https://sensuapp.org/docs/1.0/img/sensu-diagram.gif"></a>
+  <a href="{{ site.url }}/assets/img/projects/system-monitoring/sensu-diagram.gif"><img src="{{ site.url }}/assets/img/projects/system-monitoring/sensu-diagram.gif"></a>
   <center><figcaption>The simple architecture of Sensu <a href="https://sensuapp.org/docs/latest/overview/architecture.html">Sensu</a>.</figcaption></center>
 </figure>
 
@@ -62,8 +62,8 @@ Since this project was initially intended to be sold to customers (with the sync
 Nagios is an industry standard for monitoring systems and networks. It offers [thousands of open source plugins](https://exchange.nagios.org/) for use with various monitoring tasks. A few drawbacks of Nagios are high barrier to entry (as it doesn't have a clear client-server architecture like Sensu does) and a dated web UI . Since Sensu is decentralized, configuring it is relatively easier: Sensu clients only need one server to connect to, which they are then redirected to other servers if needed. **In addition, Sensu supports the usage of Nagios plugins**.
 
 <figure class="half">
-  <a href="https://jira.hyperic.com/secure/attachment/22306/Screenshot-1.jpg"><img src="https://jira.hyperic.com/secure/attachment/22306/Screenshot-1.jpg"></a>
-  <a href="https://www.nagios.com/wp-content/uploads/2016/02/Modern_Web_Interface_Drop_5.jpg"><img src="https://www.nagios.com/wp-content/uploads/2016/02/Modern_Web_Interface_Drop_5.jpg"></a>
+  <a href="{{ site.url }}/assets/img/projects/system-monitoring/old-nagios.jpg"><img src="{{ site.url }}/assets/img/projects/system-monitoring/old-nagios.jpg"></a>
+  <a href="{{ site.url }}/assets/img/projects/system-monitoring/new-nagios.jpg"><img src="{{ site.url }}/assets/img/projects/system-monitoring/new-nagios.jpg"></a>
   <center><figcaption>The left side shows the old Nagios interface, while the right side shows the new Nagios interface (not available at the time of development of this project)</figcaption></center>
 </figure>
 
