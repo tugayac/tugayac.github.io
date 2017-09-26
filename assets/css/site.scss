@@ -143,10 +143,10 @@ footer ~ div.goup-container {
 
 html.can-touch {
   a:hover {
-    color: $text-color;
+    color: $text-color !important;
   }
 
   .about-article a:hover {
-    color: $active-element-color;
+    color: $active-element-color !important;
   }
 }

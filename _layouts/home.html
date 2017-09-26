@@ -1,6 +1,4 @@
----
-layout: compress
----
+--- layout: compress ---
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -50,7 +48,13 @@ layout: compress
     </div>
 
     <footer>
-        {% include social-links.html %}
+        <div class="col-3 empty"></div>
+        <div class="col-3 social-links">
+            {% include social-links.html %}
+        </div>
+        <div class="col-3 info">
+            <p>Designed and Developed by Arda C. Tugay</p>
+        </div>
     </footer>
     {% include scripts.html %}
 </body>

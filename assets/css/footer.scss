@@ -1,5 +1,5 @@
 footer {
-  @include flex-container(center, stretch);
+  @include flex-container(center, center);
 
   border-top: 1px solid $text-color;
   position: fixed;
@@ -17,23 +17,56 @@ footer {
     height: $uhd-footer-height;
   }
 
-  .social-btn {
-    display: flex;
-    align-items: center;
-    flex: 0 0 4em;
-    background: $white;
-    color: $text-color;
-
-    &:hover {
-      color: $active-element-color;
+  & > .empty {
+    @media #{$text-small} {
+      display: none;
     }
+  }
 
-    i {
-      font-size: 1.5em;
-      width: 100%;
+  & > .info {
+    display: flex;
+    justify-content: flex-end;
 
-      @media #{$small} {
-        font-size: 1.25em;
+    & > p {
+      font-size: .75em;
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
+
+  & > .col-3 {
+    flex: 0 0 33.3%;
+
+    @media #{$text-small} {
+      flex: 0 0 50%;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+
+    .social-btn {
+      display: flex;
+      flex: 0 0 4em;
+      background: $white;
+      color: $text-color;
+
+      @media #{$text-small} {
+        flex: 0 0 3em;
+      }
+
+      &:hover {
+        color: $active-element-color;
+      }
+
+      i {
+        font-size: 1.5em;
+        width: 100%;
+
+        @media #{$small} {
+          font-size: 1.25em;
+        }
       }
     }
   }
