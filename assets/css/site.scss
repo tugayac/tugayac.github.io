@@ -59,6 +59,7 @@ body {
 
       @media #{$text-small} {
         float: none;
+        display: block;
         margin: 0 auto;
         padding: 20px;
         width: 200px;
