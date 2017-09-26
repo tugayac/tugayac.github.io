@@ -23,6 +23,7 @@
       background: $white;
 
       .flex {
+        color: $text-color;
         display: flex;
         align-items: center;
 
@@ -33,13 +34,10 @@
 
         &:hover {
           cursor: pointer;
+          color: $active-element-color !important;
 
           img {
             @include default-box-shadow(0.5);
-          }
-
-          a {
-            color: $active-element-color !important;
           }
         }
 
@@ -57,56 +55,48 @@
               max-width: 80%;
             }
 
-            a {
-              @include flex-container(center, center);
+            @include flex-container(center, center);
 
-              padding: 20px;
+            padding: 20px;
 
-              img {
-                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-                border-radius: $border-radius;
-                max-height: 200px;
-                transition: box-shadow .25s ease-in-out;
+            img {
+              box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+              border-radius: $border-radius;
+              max-height: 200px;
+              transition: box-shadow .25s ease-in-out;
 
-                &[src$='.svg'] {
-                  max-width: 250px;
-                }
+              &[src$='.svg'] {
+                max-width: 250px;
               }
             }
           }
 
           &.description {
-            & > a {
-              text-decoration: none;
-              color: $text-color;
-              font-weight: bolder;
-
-              h3 {
-                i {
-                  display: none;
-
-                  @media #{$text-small} {
-                    display: unset;
-                    margin-right: .67em;
-                  }
-                }
-
-                text-align: left;
+            h3 {
+              i {
+                display: none;
 
                 @media #{$text-small} {
-                  margin: 0;
-                  text-align: center;
+                  display: unset;
+                  margin-right: .67em;
                 }
               }
 
-              p {
-                font-weight: lighter;
+              text-align: left;
 
-                @include font-rem(16);
+              @media #{$text-small} {
+                margin: 0;
+                text-align: center;
+              }
+            }
 
-                @media #{$text-small} {
-                  display: none;
-                }
+            p {
+              font-weight: lighter;
+
+              @include font-rem(16);
+
+              @media #{$text-small} {
+                display: none;
               }
             }
           }
