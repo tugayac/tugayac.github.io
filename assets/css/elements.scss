@@ -66,6 +66,10 @@ figure {
 
   & > center {
     flex: 0 0 100%;
+
+    & > figcaption > a {
+      display: inline !important;
+    }
   }
 }
 
