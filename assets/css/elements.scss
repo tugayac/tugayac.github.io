@@ -18,21 +18,24 @@ figure {
   padding-top: 10px;
   padding-bottom: 10px;
 
-  img {
-    &[src$='.svg'] {
-      width: 100%;
-      max-width: 250px;
-    }
+  a {
+    margin: 3px 3px;
 
-    margin-bottom: 10px;
-    border-radius: 4px;
+    img {
+      &[src$='.svg'] {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      border-radius: 4px;
+    }
   }
 
   &.half {
     a {
       @include flex-container(center, center);
 
-      flex: 1 1 50%;
+      flex: 1 1 calc(50% - 12px);
 
       @media #{$small} {
         flex: 1 1 auto;
@@ -50,7 +53,7 @@ figure {
     a {
       @include flex-container(center, center);
 
-      flex: 1 1 33.3%;
+      flex: 1 1 calc(33.3% - 18px);
 
       @media #{$small} {
         flex: 1 1 auto;
