@@ -1,8 +1,16 @@
 .container-wide.resume {
-  height: calc(100% - #{$nav-height});
+  height: 100%;
   margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
 
-  @media #{$large} {
-    height: calc(100% - #{$uhd-nav-height});
+  & > object {
+    height: calc(100% - #{$nav-height});
+    margin-top: $nav-height;
+
+    @media #{$large} {
+      height: calc(100% - #{$uhd-nav-height});
+      margin-top: $uhd-nav-height;
+    }
   }
 }
