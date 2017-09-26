@@ -1,36 +1,46 @@
-.post-title {
-  .flex-header {
-    margin-bottom: 10px;
+.project {
+  .post-title {
+    .flex-header {
+      margin-bottom: 10px;
 
-    h1 {
-      margin: 0;
-    }
-
-    & > .back-button {
-      display: flex;
-      align-items: center;
-    }
-
-    & > .back-button, & > .info {
-      @media #{$small} {
-        flex: initial;
-      }
-    }
-
-    a {
-      @media #{$small} {
-        display: none;
+      h1 {
+        margin: 0;
       }
 
-      & > i {
-        vertical-align: middle;
+      & > .back-button {
+        display: flex;
+        align-items: center;
       }
 
-      & > span {
-        vertical-align: middle;
+      & > .back-button, & > .info {
+        @media #{$small} {
+          flex: initial;
+        }
+      }
+
+      a {
+        @media #{$small} {
+          display: none;
+        }
+
+        & > i {
+          vertical-align: middle;
+        }
+
+        & > span {
+          vertical-align: middle;
+        }
       }
     }
   }
+}
+
+.mfp-figure img[src$='.svg'] {
+  max-width: inherit;
+  background-color: $white;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding: 0;
 }
 
 .content {
