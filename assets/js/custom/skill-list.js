@@ -70,12 +70,21 @@ var closeModal = function ($modal) {
   });
 };
 
+var mousedownEvent;
+var clickEventHandler = function (check) {
+  return function (event) {
+    if (event.type === 'mousedown') {
+      mousedownEvent = event;
+    } else if (check(event) && event.type === 'mouseup') {
+      if (mousedownEvent.clientX === event.clientX && mousedownEvent.clientY === event.clientY) {
+        closeModal($currentlyOpenModal);
+      }
+    }
+  };
+}
+
 var $skillDetailsModal = $('.skill-details-modal');
-$skillDetailsModal.on('click', function (event) {
-  if ($(event.target).hasClass('skill-details-modal')) {
-    closeModal($currentlyOpenModal);
-  }
-});
+$skillDetailsModal.on('mousedown mouseup', clickEventHandler(function (event) { return $(event.target).hasClass('skill-details-modal'); }));
 $skillDetailsModal.find('.close').on('click', function (event) {
   closeModal($currentlyOpenModal);
 });
@@ -101,11 +110,7 @@ $skillContainers.on('click', function (event) {
 /*** Skill Level Info Modal ***/
 var $skillLevelInfoModal = $('#skill-level-info-modal');
 var $skillLevelInfoModalButton = $('.info > .btn');
-$skillLevelInfoModal.on('click', function (event) {
-  if (event.target.id === 'skill-level-info-modal') {
-    closeModal($skillLevelInfoModal);
-  }
-});
+$skillLevelInfoModal.on('mousedown mouseup', clickEventHandler(function (event) { return event.target.id === 'skill-level-info-modal'; }));
 $skillLevelInfoModal.find('.close').on('click', function (event) {
   closeModal($skillLevelInfoModal);
 });
@@ -119,6 +124,9 @@ $skillLevelInfoModalButton.on('click', function () {
     duration: 400,
     start: function () {
       $skillLevelInfoModal.css('display', 'block');
+    },
+    complete: function () {
+      $currentlyOpenModal = $skillLevelInfoModal;
     }
   });
 });
