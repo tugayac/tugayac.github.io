@@ -47,7 +47,7 @@ if (bowser.ios) {
 window.onunload = function () { };
 
 // Add lightbox class to all image links
-$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
+$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.svg']").addClass("image-popup");
 
 // FitVids options
 $(function () {
