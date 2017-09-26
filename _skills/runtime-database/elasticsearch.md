@@ -5,7 +5,9 @@ category: "runtime-database"
 tags:
   - "web-dev"
   - "databases"
-description: "I've taken a course on how to use ElasticSearch as well as utilizing it for task information in Brazos Portal (2.0). I've mostly used the date aggregation and wildcard text search features of ElasticSearch."
+relatedUsage:
+  - "Date-time aggregations"
+  - "Wildcard text search"
 lastUsed: "2017"
 projects:
   - title: "Brazos Portal (2.0)"

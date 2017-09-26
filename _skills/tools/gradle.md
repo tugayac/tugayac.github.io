@@ -6,7 +6,9 @@ tags:
   - "web-dev"
   - "databases"
   - "server"
-description: "Gradle is my go-to build tool for Java-based applications due to its easy-to-read configuration syntax (uses Groovy) and wide variety of available plugins. In the past, I have also dabbled with creating a Gradle plugin."
+relatedUsage:
+  - "Groovy"
+  - "Plugin availability"
 lastUsed: "2017"
 projects:
   - title: "Brazos Portal (2.0)"

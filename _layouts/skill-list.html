@@ -69,8 +69,15 @@
       {% if skill.lastUsed %}
       <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
       {% endif %}
-      <p>{{ skill.description }}</p>
-      {% if skill.projects %}
+      <!-- Related Usage -->
+      {% if skill.relatedUsage %}
+      <h3>Related Usage</h3>
+      <ul>
+        {% for usage in skill.relatedUsage %}
+        <li>{{ usage }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% if skill.projects %}
       <h3>Projects Used In</h3>
       <ul>
         {% for project in skill.projects %}

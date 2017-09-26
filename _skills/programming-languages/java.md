@@ -5,8 +5,11 @@ category: "programming-language"
 tags: 
   - "web-dev"
   - "server"
-description: "I've used Java for enterprise full-stack applications I've worked on at BP3. I've used many aspects of the Java language, including annotations, reflection (to extract annotations and dynamically inject variables into classes), JNI (to interface with a C++ application), and with Java 8, functions."
 lastUsed: "Recently"
+relatedUsage:
+  - "Spring Boot"
+  - "Standalone application development"
+  - "JNI"
 projects:
   - title: "Brazos Portal (2.0)"
     uri: bp3-brazos-portal-2
@@ -14,4 +17,6 @@ projects:
     uri: bp3-system-monitoring
   - title: "Automated Testing Framework"
     uri: bp3-testing-framework
+  - title: "Automated Testing using Image Recognition"
+    uri: bp3-bpmcamp-2016-opencv
 ---

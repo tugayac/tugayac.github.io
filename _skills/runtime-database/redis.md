@@ -5,7 +5,11 @@ category: "runtime-database"
 tags:
   - "web-dev"
   - "databases"
-description: "Redis is a great tool for use as an in-memory cache. Even though values stored in Redis could easily be stored in certain data structures like hash tables in a running application, Redis has the advantage of: Running anywhere (and accessed remotely), persisting on disk, atomic, and scalable."
+relatedUsage:
+  - "In-memory cache"
+  - "Persistance"
+  - "Atomicity"
+  - "Scalability"
 lastUsed: "2017"
 projects:
   - title: "BPM Monitoring"
