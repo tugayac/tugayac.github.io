@@ -66,6 +66,7 @@
               transition: box-shadow .25s ease-in-out;
 
               &[src$='.svg'] {
+                width: 100%;
                 max-width: 250px;
               }
             }
