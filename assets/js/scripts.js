@@ -1,3 +1,4 @@
+/*** Browser Support Check ***/
 var notSupportedMessage = 'You are currently using {0}, ' +
     'which may not be supported by this website. You can continue using this website, ' +
     'but some elements may not function properly. The following browsers are supported:\n\n' +
@@ -50,10 +51,6 @@ if (bowser.msie) {
     }
 }
 
-// Need this to show animation when go back in browser
-window.onunload = function () {
-};
-
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.svg']").addClass("image-popup");
 
@@ -97,6 +94,18 @@ $(document).ready(function () {
     });
 });
 
+/*** Check for images with errors ***/
+$('img').error(function () {
+    var linkElement = $(this).parent();
+    linkElement.css({
+        'color': 'black',
+        'cursor': 'default',
+        'opacity': '0.5'
+    });
+    linkElement.attr('href', '');
+    linkElement.html('Image not found');
+});
+
 /*** Cookie Utility Functions (taken from https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript) ***/
 function setCookie(name, value, days) {
     var expires = "";
@@ -120,5 +129,5 @@ function readCookie(name) {
 }
 
 function removeCookie(name) {
-    createCookie(name, "", -1);
+    setCookie(name, "", -1);
 }
