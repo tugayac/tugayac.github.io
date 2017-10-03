@@ -14,12 +14,13 @@ thumbnail: udemy-logo.svg
 thumbnailCustomCSS: "padding: 10px;"
 ---
 ## Completed Courses
-* [Webpack (v2)](https://www.udemy.com/webpack-2-the-complete-developers-guide/): Learned how to use Webpack.
-* [ElasticSearch](https://www.udemy.com/elasticsearch-complete-guide/): Learned how to use ElasticSearch.
+* [Webpack (v2)](https://www.udemy.com/webpack-2-the-complete-developers-guide/): Learned how to use Webpack ([Certificate](https://www.udemy.com/certificate/UC-79QNVHTW/)).
+* [ElasticSearch](https://www.udemy.com/elasticsearch-complete-guide/): Learned how to use ElasticSearch ([Certificate](https://www.udemy.com/certificate/UC-VLPJ3UYE/)).
+* [Unity3D](https://www.udemy.com/unitycourse/): Learned how to use and develop video games with Unity3D ([Certificate](https://www.udemy.com/certificate/UC-95FVMQ2Q/)).
 
 ## Current Courses
-* [Unity3D](https://www.udemy.com/unitycourse/): Learning how to use and develop video games with Unity3D.
-* [Machine Learning and Data Science](https://www.udemy.com/machinelearning/): Learning about Machine Learning and how to utilize data science libraries in Python and R to train models. This is currently my area of interest and I hope to expand my knowledge in this area. In the future, I am hoping to apply machine learning to my [Budgeting Application Project]({{ site.url }}/projects/personal-budgeting-app/) for detecting spending patterns with relationship to the users' environment and suggest budgets based on this information
+* [Machine Learning and Data Science](https://www.udemy.com/machinelearning/): Learning about Machine Learning and how to utilize data science libraries in Python and R to train models. This is currently my area of interest and I hope to expand my knowledge in this area. In the future, I am hoping to apply machine learning to my [Budgeting Application Project]({{ site.url }}/projects/personal-budgeting-app/) for detecting spending patterns with relationship to the users' environment and suggest budgets based on this information.
+* [Udacity's Intro to Self-Driving Cars](https://www.udacity.com/course/intro-to-self-driving-cars--nd113): Learning the basics of what's involved in developing self-driving cars to gauge my interest in this industry, while getting an introduction to Machine Learning.
 
 ## Courses Interested In
 * [VueJS 2](https://www.udemy.com/vuejs-2-the-complete-guide/): Learn how to use VueJS, another framework for building frontend applications.
