@@ -103,7 +103,9 @@ $('img').error(function () {
         'opacity': '0.5'
     });
     linkElement.attr('href', '');
-    linkElement.html('Image not found');
+    if (linkElement.html().indexOf('Image not found') === -1) {
+        linkElement.prepend('Image not found');
+    }
 });
 
 /*** Cookie Utility Functions (taken from https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript) ***/

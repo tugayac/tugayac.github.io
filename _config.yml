@@ -15,6 +15,8 @@ collections:
     permalink: /projects/:title/
   skills:
     output: false
+  photos:
+    output: false
 
 # Jekyll
 permalink:          /:title/
