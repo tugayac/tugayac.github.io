@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
 <html class="no-js">
 
 <head>
@@ -9,41 +8,41 @@ layout: compress
 </head>
 
 <body>
-    {% include nav.html %}
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="container-medium animated fadeIn">
-            <div class="content">
-                <div class="post-title {% if page.feature %} feature {% endif %}">
-                    <h1>{{ page.title }}</h1>
-                    <h4>{{ page.date | date_to_string }}</h4>
-                    {% if site.reading_time %}
-                    <p class="reading-time">
-                        <i class="fa fa-clock-o"></i> {% include read-time.html %}
-                    </p>
-                    <!-- /.entry-reading-time -->
-                    {% endif %} {% if page.type %}
-                    <a class="btn zoombtn" href="{{site.url}}/projects/">
+{% include nav.html %}
+<!-- Header -->
+<header class="header" role="banner">
+    <div class="container-medium animated fadeIn">
+        <div class="content">
+            <div class="post-title {% if page.feature %} feature {% endif %}">
+                <h1>{{ page.title }}</h1>
+                <h4>{{ page.date | date_to_string }}</h4>
+                {% if site.reading_time %}
+                <p class="reading-time">
+                    <i class="fa fa-clock-o"></i> {% include read-time.html %}
+                </p>
+                <!-- /.entry-reading-time -->
+                {% endif %} {% if page.type %}
+                <a class="btn zoombtn" href="{{site.url}}/projects/">
                     {% else %}
                     <a class="btn zoombtn" href="{{site.url}}/posts/">
-                    {% endif %}
+                        {% endif %}
                         <i class="fa fa-chevron-left"></i>
                     </a>
-                </div>
-                {{ content }}
-                <div class="entry-meta">
-                    {% include meta.html %}
-                </div>
+            </div>
+            {{ content }}
+            <div class="entry-meta">
+                {% include meta.html %}
             </div>
         </div>
-        {% if page.comments and site.disqus_shortname %}
-        <section id="disqus_thread" class="animated fadeInUp"></section>
-        <!-- /#disqus_thread -->{% endif %}
-    </header>
-    {% include scripts.html %} {% if site.mathjax == true %}
-    <!-- MathJax -->
-    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    {% endif %}
+    </div>
+    {% if page.comments and site.disqus_shortname %}
+    <section id="disqus_thread" class="animated fadeInUp"></section>
+    <!-- /#disqus_thread -->{% endif %}
+</header>
+{% include scripts.html %} {% if site.mathjax == true %}
+<!-- MathJax -->
+<script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
 </body>
 
 </html>

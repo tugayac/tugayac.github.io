@@ -1,20 +1,21 @@
 <div class="project-list">
-  {% for project in site.projects %} {% if (project.type == include.projectType) and (project.hide == false) %}
-  <ul>
-    <li>
-      <a class="flex" href="{{ site.url }}{{ project.url }}">
-        <div class="item image">
-          {% if project.thumbnail %}
-          <img style="{{ project.thumbnailCustomCSS }}" src="{{ site.url }}/assets/img/projects/thumbnails/{{ project.thumbnail }}">{%
-          endif %}
-        </div>
-        <div class="item description">
-          <h3><i class="fa fa-hand-pointer-o"></i>{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
-        </div>
-      </a>
-    </li>
-    <hr>
-  </ul>
-  {% endif %} {% endfor %}
+    {% for project in site.projects %} {% if (project.type == include.projectType) and (project.hide == false) %}
+    <ul>
+        <li>
+            <a class="flex" href="{{ site.url }}{{ project.url }}">
+                <div class="item image">
+                    {% if project.thumbnail %}
+                    <img style="{{ project.thumbnailCustomCSS }}"
+                         src="{{ site.url }}/assets/img/projects/thumbnails/{{ project.thumbnail }}">{%
+                    endif %}
+                </div>
+                <div class="item description">
+                    <h3><i class="fa fa-hand-pointer-o"></i>{{ project.title }}</h3>
+                    <p>{{ project.excerpt }}</p>
+                </div>
+            </a>
+        </li>
+        <hr>
+    </ul>
+    {% endif %} {% endfor %}
 </div>

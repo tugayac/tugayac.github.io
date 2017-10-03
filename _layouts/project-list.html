@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
 <html class="no-js">
 
 <head>
@@ -9,21 +8,22 @@ layout: compress
 </head>
 
 <body>
-    {% include nav.html %}
-    <!-- Content -->
-    <div class="container-wide animated fadeIn">
-        <div class="content project-content">
-            <h2>Work-Related Projects</h2>
-            {% include sub-project-list.html projectType="work" %}
-            <h2>Personal Projects</h2>
-            {% include sub-project-list.html projectType="personal" %}
-            <h4 style="text-align: center;">You can find more about my Open Source projects on my <a href="http://github.com/{{ site.github-url }}" target="_blank"
-                    rel="noopener noreferrer">GitHub</a> page.</h4>
-            <h2>Achievements</h2>
-            {% include sub-project-list.html projectType="achievement" %}
-        </div>
+{% include nav.html %}
+<!-- Content -->
+<div class="container-wide animated fadeIn">
+    <div class="content project-content">
+        <h2>Work-Related Projects</h2>
+        {% include sub-project-list.html projectType="work" %}
+        <h2>Personal Projects</h2>
+        {% include sub-project-list.html projectType="personal" %}
+        <h4 style="text-align: center;">You can find more about my Open Source projects on my <a
+            href="http://github.com/{{ site.github-url }}" target="_blank"
+            rel="noopener noreferrer">GitHub</a> page.</h4>
+        <h2>Achievements</h2>
+        {% include sub-project-list.html projectType="achievement" %}
     </div>
-    {% include scripts.html %}
+</div>
+{% include scripts.html %}
 </body>
 
 </html>

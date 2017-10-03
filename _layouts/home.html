@@ -1,5 +1,6 @@
---- layout: compress ---
-<!DOCTYPE html>
+---
+layout: compress
+---
 <html class="no-js">
 
 <head>
@@ -7,56 +8,71 @@
 </head>
 
 <body>
-    {% include nav.html %}
-    <div class="container animated fadeIn">
-        <article class="about-article">
-            <p class="text large-text"><img class="profile-pic" src="{{ site.url }}/assets/img/profile-pic.jpg">Hi there, I'm Arda, a software engineer
-                passionate about solving challenging problems and providing great
-                <a href="#">user experiences</a>. I have experience in <a href="#">full-stack</a>, <a href="#">custom</a>,
-                and <a href="#">experimental applications</a> development. I am also working on side projects, like a
-                <a href="#">Budgeting</a> app.</p>
-            <p class="text medium-text">I am currently focused on growing my <a href="#">Data Science and Machine Learning</a> skills, particularly interested
-                in how I can utilize Machine Learning to provide better experiences for end users.</p>
-            <p class="text medium-text">On my own time, I enjoy learning about other <a href="#">software engineering branches</a> and working on side
-                projects, while <a href="#">taking photos</a>, playing instruments, and playing video games to unwind.</p>
-            <p class="text large-text">Interested in what I do? <a href="mailto:{{ site.email }}">Email me!</a></p>
-            <hr>
-            <h2>More About Me</h2>
-            <p class="text small-text">While I enjoy programming for fun and using the latest technology, I have come to terms with a few things: Software
-                architecture, design, and user experience are of utmost importance when it comes to creating software that
-                will be maintained for years and enjoyed by customers, thus leading to lower costs and higher profits.</p>
-            <p class="text small-text">That being said, I love getting my hands dirty with new technologies. This is how I learned about <a href="">image recognition using OpenCV</a>,
-                <a href="">GraphQL</a>, and <a href="">Unity3D</a>, while bringing new tools and frameworks like <a href="">Webpack and Angular 2+ into full-stack applications</a>                at BP3. I am currently learning about Data Science and its applications in Machine Learning, which I hope
-                to be able to apply to both my workplace and personal projects.</p>
-            <h3>Education</h3>
-            <p class="text small-text">In 2014, I graduated from the <a href="https://www.usnews.com/best-colleges/rankings/engineering-overall">top undergraduate engineering college</a>                in the United States, located in Terre Haute, Indiana, with a double major (Bachelor of Science) in Computer
-                Science and Software Engineering.</p>
-            <h3>Work</h3>
-            <p class="text small-text">After college, I spent 3 years at <a href="https://www.bp-3.com/">BP3 Global</a> as a Software Engineer. I usually
-                worked in teams of 2-3 people, gathering requirements, architecting, designing, implementing, testing, releasing,
-                and maintaining full-stack products. Occassionally, I would be assigned to solo projects (consulting for
-                customers), and research and develop specialized applications for internal use or potential new products.</p>
-            <p class="text small-text">At my workplace, we practiced Agile development. Scrum was widely practiced (with 15-minute daily standups and
-                generally 1-2 week long sprints), but we started experimenting with Kanban (with varying work in-progress
-                limits) in 2017, which seemed to work better for projects that were driven by customer feature requests.</p>
-            <p class="text small-text"></p>
-            <h3>Outside of Work</h3>
-            <p class="text small-text">When engineering becomes exhausting, I turn to other outlets to unwind. Traveling to learn about other cultures
-                and their history and capturing these adventures is one of my favorite hobbies. When I'm not taking photos,
-                I am enjoying documentaries, playing instruments, playing video games, or socializing with friends.</p>
-        </article>
-    </div>
+{% include nav.html %}
+<div class="container animated fadeIn">
+    <article class="about-article">
+        <p class="text large-text"><img class="profile-pic" src="{{ site.url }}/assets/img/profile-pic.jpg">Hi there,
+            I'm Arda, a software engineer
+            passionate about solving challenging problems and providing great
+            <a href="#">user experiences</a>. I have experience in <a href="#">full-stack</a>, <a href="#">custom</a>,
+            and <a href="#">experimental applications</a> development. I am also working on side projects, like a
+            <a href="#">Budgeting</a> app.</p>
+        <p class="text medium-text">I am currently focused on growing my <a href="#">Data Science and Machine
+            Learning</a> skills, particularly interested
+            in how I can utilize Machine Learning to provide better experiences for end users.</p>
+        <p class="text medium-text">On my own time, I enjoy learning about other <a href="#">software engineering
+            branches</a> and working on side
+            projects, while <a href="#">taking photos</a>, playing instruments, and playing video games to unwind.</p>
+        <p class="text large-text">Interested in what I do? <a href="mailto:{{ site.email }}">Email me!</a></p>
+        <hr>
+        <h2>More About Me</h2>
+        <p class="text small-text">While I enjoy programming for fun and using the latest technology, I have come to
+            terms with a few things: Software
+            architecture, design, and user experience are of utmost importance when it comes to creating software that
+            will be maintained for years and enjoyed by customers, thus leading to lower costs and higher profits.</p>
+        <p class="text small-text">That being said, I love getting my hands dirty with new technologies. This is how I
+            learned about <a href="">image recognition using OpenCV</a>,
+            <a href="">GraphQL</a>, and <a href="">Unity3D</a>, while bringing new tools and frameworks like <a href="">Webpack
+                and Angular 2+ into full-stack applications</a> at BP3. I am currently learning about Data Science and
+            its applications in Machine Learning, which I hope
+            to be able to apply to both my workplace and personal projects.</p>
+        <h3>Education</h3>
+        <p class="text small-text">In 2014, I graduated from the <a
+            href="https://www.usnews.com/best-colleges/rankings/engineering-overall">top undergraduate engineering
+            college</a> in the United States, located in Terre Haute, Indiana, with a double major (Bachelor of Science)
+            in Computer
+            Science and Software Engineering.</p>
+        <h3>Work</h3>
+        <p class="text small-text">After college, I spent 3 years at <a href="https://www.bp-3.com/">BP3 Global</a> as a
+            Software Engineer. I usually
+            worked in teams of 2-3 people, gathering requirements, architecting, designing, implementing, testing,
+            releasing,
+            and maintaining full-stack products. Occassionally, I would be assigned to solo projects (consulting for
+            customers), and research and develop specialized applications for internal use or potential new products.
+        </p>
+        <p class="text small-text">At my workplace, we practiced Agile development. Scrum was widely practiced (with
+            15-minute daily standups and
+            generally 1-2 week long sprints), but we started experimenting with Kanban (with varying work in-progress
+            limits) in 2017, which seemed to work better for projects that were driven by customer feature requests.</p>
+        <p class="text small-text"></p>
+        <h3>Outside of Work</h3>
+        <p class="text small-text">When engineering becomes exhausting, I turn to other outlets to unwind. Traveling to
+            learn about other cultures
+            and their history and capturing these adventures is one of my favorite hobbies. When I'm not taking photos,
+            I am enjoying documentaries, playing instruments, playing video games, or socializing with friends.</p>
+    </article>
+</div>
 
-    <footer>
-        <div class="col-3 empty"></div>
-        <div class="col-3 social-links">
-            {% include social-links.html %}
-        </div>
-        <div class="col-3 info">
-            <p>Designed and Developed by Arda C. Tugay</p>
-        </div>
-    </footer>
-    {% include scripts.html %}
+<footer>
+    <div class="col-3 empty"></div>
+    <div class="col-3 social-links">
+        {% include social-links.html %}
+    </div>
+    <div class="col-3 info">
+        <p>Designed and Developed by Arda C. Tugay</p>
+    </div>
+</footer>
+{% include scripts.html %}
 </body>
 
 </html>

@@ -1,26 +1,26 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
 <html class="no-js">
 
 <head>
-  {% include head.html %}
+    {% include head.html %}
 </head>
 
 <body>
-  {% assign skills = site.skills | sort: 'level' | reverse %}
-  <!-- Nav -->
-  {% include nav.html %}
-  <!-- Header -->
-  <div class="container-wide animated fadeIn resume">
+{% assign skills = site.skills | sort: 'level' | reverse %}
+<!-- Nav -->
+{% include nav.html %}
+<!-- Header -->
+<div class="container-wide animated fadeIn resume">
     <object data="{{ site.url }}/assets/docs/resume.pdf" type="application/pdf" width="100%" height="100%">
-        <p>This browser does not support viewing PDFs in the browser. Please <a href="{{ site.url }}/assets/docs/resume.pdf">download the PDF</a> to view it.</p>
-     </object>
-  </div>
+        <p>This browser does not support viewing PDFs in the browser. Please <a
+            href="{{ site.url }}/assets/docs/resume.pdf">download the PDF</a> to view it.</p>
+    </object>
+</div>
 
-  <!-- Scripts -->
-  {% include scripts.html %}
+<!-- Scripts -->
+{% include scripts.html %}
 </body>
 
 </html>

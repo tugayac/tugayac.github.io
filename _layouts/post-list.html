@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
 <html class="no-js">
 
 <head>
@@ -9,26 +8,26 @@ layout: compress
 </head>
 
 <body>
-    {% include nav.html %}
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="container-wide animated fadeIn">
-            <div class="content">
-                {% include page-header.html %}
-                <div class="post-list">
-                    {% for post in site.posts %} {% if post.project == null %}
-                    <ul>
-                        <li class="post-summary">
-                            <a class="title zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                            <p>{{ post.excerpt }} <a href="{{ site.url }}{{ post.url }}">Read More</a></p>
-                        </li>
-                    </ul>
-                    {% endif %} {% endfor %}
-                </div>
+{% include nav.html %}
+<!-- Header -->
+<header class="header" role="banner">
+    <div class="container-wide animated fadeIn">
+        <div class="content">
+            {% include page-header.html %}
+            <div class="post-list">
+                {% for post in site.posts %} {% if post.project == null %}
+                <ul>
+                    <li class="post-summary">
+                        <a class="title zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                        <p>{{ post.excerpt }} <a href="{{ site.url }}{{ post.url }}">Read More</a></p>
+                    </li>
+                </ul>
+                {% endif %} {% endfor %}
             </div>
         </div>
-    </header>
-    {% include scripts.html %}
+    </div>
+</header>
+{% include scripts.html %}
 </body>
 
 </html>

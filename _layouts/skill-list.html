@@ -1,101 +1,100 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
 <html class="no-js">
 
 <head>
-  {% include head.html %}
+    {% include head.html %}
 </head>
 
 <body>
-  {% assign skills = site.skills | sort: 'level' | reverse %}
-  <!-- Nav -->
-  {% include nav.html %}
-  <!-- Header -->
-  <div class="container-medium animated fadeIn skill-list">
+{% assign skills = site.skills | sort: 'level' | reverse %}
+<!-- Nav -->
+{% include nav.html %}
+<!-- Header -->
+<div class="container-medium animated fadeIn skill-list">
     <div class="content">
-      <div class="flex-header">
-        <div class="back-button"></div>
-        <div class="title">
-          <h1>{{ page.title }}</h1>
+        <div class="flex-header">
+            <div class="back-button"></div>
+            <div class="title">
+                <h1>{{ page.title }}</h1>
+            </div>
+            <div class="info">
+                <a class="btn">What do the skill levels mean?</a>
+                <a class="btn small">Skill Levels</a>
+            </div>
         </div>
-        <div class="info">
-          <a class="btn">What do the skill levels mean?</a>
-          <a class="btn small">Skill Levels</a>
+        <div id="tags">
+            <h2>Filter</h2>
+            <div class="tag-buttons">
+                <a class="btn" data-tag-name="data-science">Data Science</a>
+                <a class="btn" data-tag-name="databases">Databases</a>
+                <a class="btn" data-tag-name="ios">iOS</a>
+                <a class="btn" data-tag-name="networking">Networking</a>
+                <a class="btn" data-tag-name="server">Server</a>
+                <a class="btn" data-tag-name="web-dev">Web Dev</a>
+            </div>
         </div>
-      </div>
-      <div id="tags">
-        <h2>Filter</h2>
-        <div class="tag-buttons">
-          <a class="btn" data-tag-name="data-science">Data Science</a>
-          <a class="btn" data-tag-name="databases">Databases</a>
-          <a class="btn" data-tag-name="ios">iOS</a>
-          <a class="btn" data-tag-name="networking">Networking</a>
-          <a class="btn" data-tag-name="server">Server</a>
-          <a class="btn" data-tag-name="web-dev">Web Dev</a>
+        <div id="programming-language-list">
+            <h2 style="text-align: center">Programming Languages</h2>
+            {% include skill-container.html skillCategory="programming-language" %}
         </div>
-      </div>
-      <div id="programming-language-list">
-        <h2 style="text-align: center">Programming Languages</h2>
-        {% include skill-container.html skillCategory="programming-language" %}
-      </div>
-      <div id="framework-library-list">
-        <h2 style="text-align: center">Frameworks and Libraries</h2>
-        {% include skill-container.html skillCategory="framework-library" %}
-      </div>
-      <div id="runtime-database-list">
-        <h2 style="text-align: center">Runtime Environment and Databases</h2>
-        {% include skill-container.html skillCategory="runtime-database" %}
-      </div>
-      <div id="tools-list">
-        <h2 style="text-align: center">Tools</h2>
-        {% include skill-container.html skillCategory="tool" %}
-      </div>
-      <div id="other-software-list">
-        <h2 style="text-align: center">Other Software</h2>
-        {% include skill-container.html skillCategory="other-software" %}
-      </div>
+        <div id="framework-library-list">
+            <h2 style="text-align: center">Frameworks and Libraries</h2>
+            {% include skill-container.html skillCategory="framework-library" %}
+        </div>
+        <div id="runtime-database-list">
+            <h2 style="text-align: center">Runtime Environment and Databases</h2>
+            {% include skill-container.html skillCategory="runtime-database" %}
+        </div>
+        <div id="tools-list">
+            <h2 style="text-align: center">Tools</h2>
+            {% include skill-container.html skillCategory="tool" %}
+        </div>
+        <div id="other-software-list">
+            <h2 style="text-align: center">Other Software</h2>
+            {% include skill-container.html skillCategory="other-software" %}
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- modal -->
-  {% include skill-level-info-modal.html %}
-  <!-- ./modal -->
+<!-- modal -->
+{% include skill-level-info-modal.html %}
+<!-- ./modal -->
 
-  {% for skill in skills %}
-  <div class="skill-details-modal modal" data-skill-title="{{ skill.title }}">
+{% for skill in skills %}
+<div class="skill-details-modal modal" data-skill-title="{{ skill.title }}">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <!-- ./close -->
-      {% if skill.lastUsed %}
-      <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
-      {% endif %}
-      <!-- Related Usage -->
-      {% if skill.relatedUsage %}
-      <h3>Related Usage</h3>
-      <ul>
-        {% for usage in skill.relatedUsage %}
-        <li>{{ usage }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %} {% if skill.projects %}
-      <h3>Projects Used In</h3>
-      <ul>
-        {% for project in skill.projects %}
-        <li><a href="{{ site.url }}/projects/{{ project.uri }}/">{{ project.title }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      <a class="btn done">Done</a>
+        <span class="close">&times;</span>
+        <!-- ./close -->
+        {% if skill.lastUsed %}
+        <p><b>Last Used:</b> {{ skill.lastUsed }}</p>
+        {% endif %}
+        <!-- Related Usage -->
+        {% if skill.relatedUsage %}
+        <h3>Related Usage</h3>
+        <ul>
+            {% for usage in skill.relatedUsage %}
+            <li>{{ usage }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %} {% if skill.projects %}
+        <h3>Projects Used In</h3>
+        <ul>
+            {% for project in skill.projects %}
+            <li><a href="{{ site.url }}/projects/{{ project.uri }}/">{{ project.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <a class="btn done">Done</a>
     </div>
-  </div>
-  {% endfor %}
+</div>
+{% endfor %}
 
-  <!-- Scripts -->
-  {% include scripts.html %}
-  <!-- Custom Scripts -->
-  {% javascript custom/skill-list.js %}
+<!-- Scripts -->
+{% include scripts.html %}
+<!-- Custom Scripts -->
+{% javascript custom/skill-list.js %}
 </body>
 
 </html>
