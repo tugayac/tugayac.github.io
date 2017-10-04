@@ -1,43 +1,43 @@
 #!/usr/bin/env bash
 
-echo "=== Building website ===\n\n"
+printf "\n\n=== Building website ==="
 JEKYLL_ENV=production bundle exec jekyll build
 
-echo "=== Copying CNAME file to _site ===\n\n"
+printf "\n\n=== Copying CNAME file to _site ==="
 cp CNAME _site/
 
-echo "=== Stashing changes in development branch ===\n\n"
+printf "\n\n=== Stashing changes in development branch ==="
 git stash
 
-echo "=== Creating and moving to dev-ready branch ===\n\n"
+printf "\n\n=== Creating and moving to dev-ready branch ==="
 git checkout -b dev-ready
 
-echo "=== Removing _site from .gitignore ===\n\n"
+printf "\n\n=== Removing _site from .gitignore ==="
 sed -i.gitignore '/_site\//d' .gitignore
 
-echo "=== Removing backup .gitignore file ===\n\n"
+printf "\n\n=== Removing backup .gitignore file ==="
 rm -rf .gitignore.gitignore
 
-echo "=== Adding updated .gitignore file and all site data for commit ===\n\n"
+printf "\n\n=== Adding updated .gitignore file and all site data for commit ==="
 git add .gitignore _site/
 
-echo "=== Committing ===\n\n"
+printf "\n\n=== Committing ==="
 git commit -m "Deploying updated version of website, $(date)"
 
-echo "=== Extracting _site as subtree, into a new branch called deployment ===\n\n"
+printf "\n\n=== Extracting _site as subtree, into a new branch called deployment ==="
 git subtree split --prefix _site -b deployment
 
-echo "=== Forcing master branch to point to deployment branch ===\n\n"
+printf "\n\n=== Forcing master branch to point to deployment branch ==="
 git branch -f master deployment
 
-echo "=== Moving to master branch ===\n\n"
+printf "\n\n=== Moving to master branch ==="
 git checkout master
 
-echo "=== Force pushing changes to remote master branch ===\n\n"
+printf "\n\n=== Force pushing changes to remote master branch ==="
 git push -f origin master
 
-echo "=== Removing temp branches ===\n\n"
+printf "\n\n=== Removing temp branches ==="
 git branch -D dev-ready deployment
 
-echo "=== Moving back to development branch ===\n\n"
+printf "\n\n=== Moving back to development branch ==="
 git checkout development
