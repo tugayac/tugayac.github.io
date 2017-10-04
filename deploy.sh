@@ -22,7 +22,7 @@ echo "=== Adding updated .gitignore file and all site data for commit ===\n\n"
 git add .gitignore _site/
 
 echo "=== Committing ===\n\n"
-git commit -m "Deploying updated version of website"
+git commit -m "Deploying updated version of website, $(date)"
 
 echo "=== Extracting _site as subtree, into a new branch called deployment ===\n\n"
 git subtree split --prefix _site -b deployment
