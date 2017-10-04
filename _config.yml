@@ -56,8 +56,8 @@ disqus_shortname:   ardactugay
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
-  #analytics:
+google:
+  analytics:       true
   #verify:
   #ad-client:
   #ad-slot:
