@@ -43,6 +43,17 @@ contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcap
 <!-- CSS -->
 {% css main %}
 <!-- JS -->
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+{% if site.google.analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107528867-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107528867-1');
+</script>
+{% endif %}
 <script src="{{ site.url }}/assets/js/bowser.min.js"></script>
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/favicons/apple-icon-precomposed.png">
