@@ -73,13 +73,17 @@ nav {
       }
     }
 
-    & > span {
-      font-size: 1.15em;
-      vertical-align: middle;
-      padding-left: 0.67em;
+    & > a {
+      color: $text-color;
 
-      @media #{$small} {
-        padding: 0 0 0 20px;
+      & > span {
+        font-size: 1.15em;
+        vertical-align: middle;
+        padding-left: 0.67em;
+
+        @media #{$small} {
+          padding: 0 0 0 20px;
+        }
       }
     }
   }
