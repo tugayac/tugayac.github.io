@@ -92,6 +92,16 @@ $(document).ready(function () {
         // make it unique to apply your CSS animations just to this exact popup
         mainClass: 'mfp-fade'
     });
+
+    // Add attribute to open links on new tab, minus navbar links
+    $('a').each(function() {
+        var $a = $(this);
+        if ($a.parents('nav').size() === 0) {
+            if (!$a.attr('target')) {
+                $a.attr('target', '_blank');
+            }
+        }
+    });
 });
 
 /*** Check for images with errors ***/
