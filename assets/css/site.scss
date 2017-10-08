@@ -2,7 +2,6 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
 }
 
 body {
@@ -25,9 +24,7 @@ body {
 
 @mixin container-base($width) {
   width: $width;
-  margin: 0 auto;
-  margin-top: $nav-height;
-  margin-bottom: $footer-height;
+  margin: $nav-height auto $footer-height;
   color: $text-color;
 
   @media #{$large} {
