@@ -5,4 +5,5 @@ Gemfile.lock
 .DS_Store
 .asset-cache/
 .idea
-
+package-lock.json
+node_modules/
