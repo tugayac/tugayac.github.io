@@ -1,4 +1,4 @@
-var $skillContainers = $('div.skill-container');
+var $skillContainers = $('.skill-list div.skill-container');
 
 /*** Tag Filtering ***/
 var setDisplayPropertyNone = function (container) {
@@ -10,16 +10,16 @@ var setDisplayPropertyNone = function (container) {
 
 var forEachSkill = function (event) {
   return function () {
-    var container = $(this);
-    if (container.data('tags')) {
-      var tags = container.data('tags').split(',');
+    var skillContainer = $(this);
+    if (skillContainer.data('tags')) {
+      var tags = skillContainer.data('tags').split(',');
       if (tags.length === 0 || tags.indexOf(event.target.dataset.tagName) === -1) {
-        setDisplayPropertyNone(container);
+        setDisplayPropertyNone(skillContainer);
       } else {
-        container.css('display', container.data('defaultDisplayValue'));
+        skillContainer.css('display', skillContainer.data('defaultDisplayValue'));
       }
     } else {
-      setDisplayPropertyNone(container);
+      setDisplayPropertyNone(skillContainer);
     }
   }
 };
