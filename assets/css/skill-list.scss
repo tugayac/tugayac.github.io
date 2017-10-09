@@ -114,9 +114,10 @@ $signal-base-height: 12px;
 #tags {
   display: flex;
   align-items: center;
+  padding: 20px 0 10px 0;
 
-  h2 {
-    margin-right: 10px;
+  h3 {
+    margin: 0 10px 0 0;
   }
 
   & > .tag-buttons {
@@ -124,8 +125,7 @@ $signal-base-height: 12px;
     flex-wrap: wrap;
 
     & > a.btn {
-      font-weight: 700;
-      font-size: 1.5em;
+      font-size: 1.15em;
       margin: 0 10px;
 
       &.selected {
@@ -136,30 +136,17 @@ $signal-base-height: 12px;
 }
 
 .skill-list .flex-header {
+  margin: 0.67em 0;
+
   & > .info {
-    @media #{$text-small} {
-      align-content: flex-end;
-    }
+    justify-content: center;
 
     & > a.btn {
-      @media #{$small} {
-        display: none;
-      }
-
-      &.small {
-        display: none;
-
-        @media #{$small} {
-          display: unset;
-          text-align: right;
-        }
-      }
+      font-weight: 700;
     }
   }
 
-  & > .back-button, & > .info {
-    @media #{$small} {
-      flex: 0 1 40%;
-    }
+  & > .info {
+    flex: 0 1 100%;
   }
 }
