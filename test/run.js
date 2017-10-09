@@ -14,5 +14,5 @@ casper.options.onResourceRequested = function(casper, requestData, request) {
     });
 };
 
-// skillsPage();
+skillsPage();
 navbar();
