@@ -71,17 +71,20 @@ var closeModal = function ($modal) {
 };
 
 var mousedownEvent;
+var previousTarget;
 var clickEventHandler = function (check) {
   return function (event) {
     if (event.type === 'mousedown') {
       mousedownEvent = event;
+      previousTarget = event.target;
     } else if (check(event) && event.type === 'mouseup') {
-      if (mousedownEvent.clientX === event.clientX && mousedownEvent.clientY === event.clientY) {
+      if (mousedownEvent.clientX === event.clientX && mousedownEvent.clientY === event.clientY
+          || $(previousTarget).hasClass('skill-details-modal') && $(event.target).hasClass('skill-details-modal')) {
         closeModal($currentlyOpenModal);
       }
     }
   };
-}
+};
 
 var $skillDetailsModal = $('.skill-details-modal');
 $skillDetailsModal.on('mousedown mouseup', clickEventHandler(function (event) { return $(event.target).hasClass('skill-details-modal'); }));
