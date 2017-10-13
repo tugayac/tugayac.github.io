@@ -19,7 +19,7 @@ thumbnailCustomCSS: "padding: 10px;"
 * [Unity3D](https://www.udemy.com/unitycourse/): Learned how to use and develop video games with Unity3D ([Certificate](https://www.udemy.com/certificate/UC-95FVMQ2Q/)).
 
 ## Current Courses
-* [Udacity's Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009): Learning how to become a machine learning engineer, as well as applying models to data sets in various fields. This is currently my area of interest and I hope to expand my knowledge in this area. In the future, I am hoping to apply machine learning to my [Budgeting Application Project]({{ site.url }}/projects/personal-budgeting-app/) for detecting spending patterns with relationship to the users' environment and suggest budgets based on this information.
+* [Machine Learning by Andrew Ng, on Coursera](https://www.coursera.org/learn/machine-learning): Learning about the theory and applications of machine learning algorithms. This is currently my area of interest and I hope to expand my knowledge in this area. In the future, I am hoping to apply machine learning to my [Budgeting Application Project]({{ site.url }}/projects/personal-budgeting-app/) for detecting spending patterns with relationship to the users' environment and suggest budgets based on this information.
 
 ## Courses Interested In
 * [VueJS 2](https://www.udemy.com/vuejs-2-the-complete-guide/): Learn how to use VueJS, another framework for building frontend applications.
