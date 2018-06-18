@@ -14,6 +14,4 @@ lastUsed: "2017"
 projects:
   - title: "BPM Monitoring"
     uri: bp3-system-monitoring
-  - title: "A Budgeting Application"
-    uri: personal-budgeting-app
 ---

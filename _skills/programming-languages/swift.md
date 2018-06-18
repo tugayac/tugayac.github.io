@@ -8,6 +8,4 @@ relatedUsage:
   - "iOS"
 lastUsed: "Recently"
 projects:
-  - title: "A Budgeting Application"
-    uri: personal-budgeting-app
 ---
