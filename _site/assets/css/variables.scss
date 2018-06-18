@@ -1,0 +1,57 @@
+// Colors
+$white: #fff;
+$black: #000;
+$gray: #eee;
+$medium-gray: #ACACAC;
+
+$text-color: #000;
+$secondary-text-color: #333;
+$active-element-color: #006eff;
+$active-element-hover-color: #5BBA6F;
+
+$nav-link-hover: $gray;
+$inline-code-border-color: #d0d1d5;
+$figcaption-color: #999;
+$blockquote-color: #444;
+
+// Navbar
+$nav-link-hover-transition: 0.15s;
+$nav-height: 70px;
+$nav-shrink-height: 40px;
+$uhd-nav-height: 100px;
+$uhd-nav-shrink-height: 60px;
+
+// Footer
+$footer-height: 50px;
+$footer-small-height: 40px;
+$uhd-footer-height: 70px;
+
+//fonts
+$primary-font: Arial, sans-serif;
+$code-font: Inconsolata;
+$alt-font: serif;
+$small-font-size: 13;
+$doc-font-size: 16;
+$uhd-font-size: 20;
+$doc-line-height: 26;
+
+/*** Media Queries ***/
+// All calculations made for base font 16px
+/** Generic **/
+// 960px-
+$small: "only screen and (max-width: 60em)";
+
+// Between 961px and 1920px
+$medium: "only screen and (min-width: 60.1em) and (max-width: 120em)";
+
+// 1921px+
+$large: "only screen and (min-width: 120.1em)";
+
+/** For Body **/
+// 704px-
+$text-small: "only screen and (max-width: 44em)";
+
+/*** END Media Queries ***/
+
+//sizes
+$border-radius: 3px;

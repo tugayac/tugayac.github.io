@@ -1,0 +1,1 @@
+!function(){function t(){clearTimeout(n),c=!0,"can-touch"!=o&&(o="can-touch",document.documentElement.classList.add(o)),n=setTimeout(function(){c=!1},1e3)}function e(){c||"can-touch"!=o||(c=!1,o="",document.documentElement.classList.remove("can-touch"))}var n,c=!1,o="";document.addEventListener("touchstart",t,!1),document.addEventListener("mouseover",e,!1)}();

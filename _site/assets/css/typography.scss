@@ -1,0 +1,112 @@
+// content area
+.content {
+  @include font-size(15);
+
+  padding: 0 2rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  text-align: justify;
+
+  @media #{$small} {
+    padding: 0 .5em;
+  }
+}
+
+// titles
+.title {
+  text-align: center;
+  font-weight: bold;
+
+  > p {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  > a > p {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.post-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+// quotes
+blockquote {
+  font-family: $alt-font;
+  font-style: italic;
+  border-left: 8px solid $blockquote-color;
+  padding-left: 20px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  blockquote {
+    margin-left: -28px;
+  }
+}
+
+// figcaption
+figcaption {
+  padding-top: 10px;
+
+  @include font(14);
+
+  color: $figcaption-color;
+}
+
+// links
+a {
+  transition: color .25s;
+  color: $active-element-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $active-element-hover-color;
+  }
+
+  &:active {
+    transition: color .25s;
+    color: $text-color;
+  }
+}
+
+// pre and code
+pre, code {
+  font-family: $code-font;
+  overflow-x: auto;
+}
+
+p code,
+li code,
+p pre,
+li pre {
+  @include font(14);
+
+  background-color: $gray;
+  border: 1px solid $inline-code-border-color;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 0 5px;
+}
+
+li .highlight code,
+li .highlight pre {
+  background-color: transparent;
+  border: 0;
+}
+
+table {
+  width: 100%;
+}
+
+// Rogue automatically creates links for things that look like links... This disables that.
+code > a.vglnk {
+  pointer-events: none;
+  cursor: default;
+  color: inherit;
+}

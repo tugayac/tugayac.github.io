@@ -1,0 +1,180 @@
+@mixin item-highlight($width) {
+  background-color: $nav-link-hover;
+  box-shadow: inset 0 $width 0 $text-color;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: $nav-height;
+
+  @media #{$large} {
+    height: $uhd-nav-height;
+  }
+
+  z-index: 1;
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid $text-color;
+  display: flex;
+  transition: all .25s ease;
+
+  &.shrink {
+    height: $nav-shrink-height;
+
+    @media #{$large} {
+      height: $uhd-nav-shrink-height;
+    }
+
+    & > .logo-container {
+      & > .logo {
+        visibility: hidden;
+      }
+    }
+
+    & > .menu-icon > a {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    & > .fluid-menu-container {
+      top: $nav-shrink-height;
+
+      @media #{$large} {
+        height: $uhd-nav-shrink-height;
+      }
+    }
+  }
+
+  &.menu-open {
+    border-bottom: none;
+  }
+
+  & > .logo-container {
+    display: flex;
+    flex: 0 0 25%;
+    align-items: center;
+
+    @media #{$small} {
+      flex: 0 0 50%;
+    }
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      margin-left: 40px;
+
+      & > img {
+        border-radius: 50%;
+      }
+
+      @media #{$small} {
+        display: none;
+      }
+    }
+
+    & > a {
+      color: $text-color;
+
+      & > span {
+        font-size: 1.15em;
+        vertical-align: middle;
+        padding-left: 0.67em;
+
+        @media #{$small} {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
+
+  & > .fluid-menu-container {
+    flex: 0 0 50%;
+
+    @include flex-container(center, stretch);
+
+    @media #{$small} {
+      // jQuery will add "flex"
+      display: none;
+      flex: none;
+      flex-direction: column;
+      justify-content: initial;
+      align-items: stretch;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      line-height: initial;
+      border-bottom: solid 1px $text-color;
+      background-color: $white;
+    }
+
+    & > div {
+      flex: 0 0 8em;
+
+      @include flex-container(center, stretch);
+
+      @media #{$small} {
+        flex: 0 0 4.35em;
+      }
+
+      & > a {
+        @include flex-container(center, center);
+
+        padding: 0 25px;
+        flex: 0 0 100%;
+        color: $text-color;
+        font-size: 1.1em;
+
+        @media #{$small} {
+          padding: 0;
+        }
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+
+      &.active {
+        @include item-highlight(-3px);
+
+        @media #{$small} {
+          box-shadow: none;
+        }
+      }
+
+      &:hover:not(.active) {
+        @include item-highlight(-1px);
+
+        @media #{$small} {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  & > .menu-icon {
+    display: none;
+
+    @media #{$small} {
+      flex: 0 0 50%;
+      padding-right: 10px;
+
+      @include flex-container(flex-end, center);
+    }
+
+    & > a {
+      color: $text-color;
+      padding: 10px;
+      display: inline-block;
+
+      &:hover {
+        color: $text-color;
+      }
+
+      & > i {
+        display: block;
+      }
+    }
+  }
+}
