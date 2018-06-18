@@ -1,0 +1,19 @@
+.flex-header {
+  display: flex;
+
+  & > .back-button, & > .info {
+    flex: 0 1 30%;
+  }
+
+  & > .info {
+    @include flex-container(flex-end, center);
+  }
+
+  & > .title {
+    flex: 1 0 40%;
+
+    @media #{$small} {
+      flex: 0 1 100%;
+    }
+  }
+}

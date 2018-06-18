@@ -1,0 +1,152 @@
+$signal-base-width: 10px;
+$signal-base-height: 12px;
+
+@mixin skill-container($border, $width: null, $flex: 1 0 20%) {
+  & > .skill-container {
+    @if width != null {
+      width: $width;
+    }
+
+    @if $border {
+      border: solid 1px $medium-gray;
+      border-radius: $border-radius;
+      border-color: rgba($medium-gray, 0.4) rgba($medium-gray, 0.4) $medium-gray;
+    }
+
+    flex: $flex;
+
+    @include flex-container(center, center);
+
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: box-shadow .15s ease-in-out;
+
+    @if $border {
+      &:hover {
+        @include default-box-shadow(0.25);
+
+        .skill-title {
+          color: $active-element-hover-color;
+        }
+
+        .skill-level > .signal-bar.active {
+          background-color: $active-element-hover-color;
+        }
+      }
+    }
+
+    & > .skill-title {
+      padding-right: 1em;
+      text-align: right;
+      flex: 1 1 auto;
+      color: $active-element-color;
+      transition: color .15s ease-in-out;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    & > .skill-level {
+      flex: 1 0 auto;
+
+      & > .signal-bar {
+        width: $signal-base-width;
+        background-color: #dfdfdf;
+        border-radius: $border-radius;
+        display: inline-block;
+
+        &.beginner {
+          height: $signal-base-height;
+        }
+
+        &.intermediate {
+          height: $signal-base-height + $signal-base-height;
+        }
+
+        &.advanced {
+          height: $signal-base-height + $signal-base-height * 2;
+        }
+
+        &.master {
+          height: $signal-base-height + $signal-base-height * 3;
+        }
+
+        &.active {
+          background-color: $active-element-color;
+          transition: background-color .15s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include skill-container(false, 225px, 1 0 auto);
+
+  & > .description-container {
+    text-align: justify;
+
+    & > hr {
+      margin-top: 0;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @include skill-container(true);
+}
+
+#tags {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 10px 0;
+
+  h3 {
+    margin: 0 10px 0 0;
+  }
+
+  & > .tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > a.btn {
+      font-size: 1.15em;
+      margin: 0 10px;
+
+      &.selected {
+        color: $active-element-hover-color;
+      }
+    }
+  }
+}
+
+.skill-list .flex-header {
+  margin: 0.67em 0;
+
+  & > .info {
+    justify-content: center;
+
+    & > a.btn {
+      font-weight: 700;
+    }
+  }
+
+  & > .info {
+    flex: 0 1 100%;
+  }
+}

@@ -1,0 +1,82 @@
+@media print {
+  body {
+    background-color: $white;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .container, .container-medium, .container-wide {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .about-article {
+      padding: 0;
+    }
+  }
+
+  a {
+    color: $text-color !important;
+    font-weight: unset !important;
+  }
+
+  .feature {
+    padding: 0;
+  }
+
+  .project-list {
+    .image {
+      display: none;
+    }
+  }
+
+  .project {
+    figure {
+      page-break-before: auto;
+      page-break-after: auto;
+      page-break-inside: avoid;
+    }
+  }
+
+  .skill-list {
+    .flex-header {
+      .info {
+        a {
+          display: none;
+        }
+      }
+    }
+
+    #tags {
+      display: none;
+    }
+
+    .flex-container {
+      .skill-container {
+        .skill-title {
+          color: $text-color;
+        }
+
+        .skill-level {
+          .signal-bar.active {
+            background-color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .reading-time,
+  #disqus_thread {
+    display: none;
+  }
+
+  .goup-container {
+    display: none !important;
+  }
+}

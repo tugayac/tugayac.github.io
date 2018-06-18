@@ -1,0 +1,71 @@
+.project {
+  .post-title {
+    .flex-header {
+      margin-bottom: 10px;
+      padding-top: 10px;
+
+      h1 {
+        margin: 0;
+      }
+
+      & > .back-button {
+        display: flex;
+        align-items: center;
+      }
+
+      & > .back-button, & > .info {
+        @media #{$small} {
+          flex: initial;
+        }
+      }
+
+      a {
+        @media #{$small} {
+          display: none;
+        }
+
+        & > i {
+          vertical-align: middle;
+        }
+
+        & > span {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .back-button-end {
+    padding-left: 20px;
+  }
+}
+
+.mfp-figure img[src$='.svg'] {
+  max-width: inherit;
+  background-color: $white;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.content {
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tech-tag {
+      background-color: $secondary-text-color;
+      color: $white;
+      font-size: 0.85em;
+      padding: 0 5px;
+      margin: 3px;
+      border-radius: $border-radius;
+      opacity: 0.5;
+
+      @media #{$text-small} {
+        flex: 1 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
